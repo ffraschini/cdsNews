@@ -41,7 +41,8 @@ require_once("connect.php");
 		<div id="div_News" >
 				<section id="SecContactUs">
 					<form id="form1" action="upload.php" method="post" enctype="multipart/form-data">
-					
+					<input type="text" name="typeAction" id="typeAction" style="display:none;"></input>
+					<input type="text" name="idToUpdate" id="idToUpdate" style="display:none;"></input>
 					<div id="newsTextArea">					
 						<p>Titulo de la noticia</p>
 							<input type="text" name="tituloNew" id="tituloNew"></input>
@@ -69,9 +70,14 @@ require_once("connect.php");
 						
 					</div>
 					 <div style="clear: both;"></div>
-					 <div  style= "text-align:center;  margin-bottom: 20px;">
+					 <div style ="text-align:center;">
+					 <div  style= "text-align:center;  margin-bottom: 20px; display: inline-block;">
                           <a id="contact-submit" style="margin: 0;" onclick="save();"  href="#">Save</a>
                      </div>
+					 <div id="editBtn" style= "text-align:center; display: inline-block; margin-bottom: 20px;">
+                          <a id="contact-submit" style="margin: 0;" onclick="update(event);"  href="">Update</a>
+                     </div>
+					 </div>
 					</form> 
 					<div style="text-align: center; height: 40px;">
 						<span id="exito" style="display: inherit;display: none;" > Se guardo con exito.</span>						
@@ -82,15 +88,14 @@ require_once("connect.php");
 							<tbody>
 							<?php
 								$x = 1;
-								while ($fila = mysql_fetch_assoc($resultado)) {
-										
+								while ($fila = mysql_fetch_assoc($resultado)) {										
 								
 							?>
 								<tr id="<?php echo $x ?>">
 									<td>
 										<span><?php echo $fila['position'];?></span>
 									</td>
-									<td>
+									<td id="<?php echo $fila['id'];?>" class ="edit" style=" cursor: pointer;">
 										<span><?php echo $fila['name'];?></span>
 									</td>
 									<td style="text-align: center;">
@@ -118,9 +123,21 @@ require_once("connect.php");
 			</div>	
 	
 	<script>
-  
+  var editId = 0;
   function save(){	
-	  document.getElementById("form1").submit();
+	document.getElementById("typeAction").value = "save";		
+	document.getElementById("form1").submit();
+ }
+ 
+ function update(event){
+	event.preventDefault();
+	document.getElementById("typeAction").value = "update";
+	document.getElementById("idToUpdate").value = editId;
+	if(editId != 0){
+		document.getElementById("form1").submit();
+	}else{
+		alert("No se selecciono una noticia.")
+	}
  }
  
  
@@ -213,6 +230,7 @@ require_once("connect.php");
  });
 
  $( ".rmvNew" ).click(function() {
+	
    var parametros = {
         "id" : this.id,          
      };
@@ -226,17 +244,48 @@ require_once("connect.php");
                 },
                 success:  function (data) {
                        refreshTable(data);
+					  
                 }
         });
 
 });
+
+$( ".edit" ).click(function() {
+	editId = this.id;
+   var parametros = {
+        "id" : this.id,          
+     };
+
+        $.ajax({
+                data:  parametros,
+                url:   'getNews.php',
+                type:  'post',
+                beforeSend: function () {
+                      //  $("#resultado").html("Procesando, espere por favor...");
+                },
+                success:  function (data) {
+                      fillData(data);
+                }
+        });
+
+});
+	
+	function fillData(data){
+		$.each(data, function(k,v){
+			document.getElementById("tituloNew").value = v.name;
+			document.getElementById("linkNew").value = v.link;
+			document.getElementById("area1").value = v.text;
+		});
+		document.getElementById("editBtn").style.display = "inline-block";
+	
+	}
 
 	function refreshTable(x){
 		document.getElementById("newsList").innerHTML = "";
 		$.each(x, function(k,v){
 			var tr = document.createElement("tr");
 			tr.id = k;	
-			tr.innerHTML = "<td><span>"+v.position+"</span></td><td><span>"+v.name+"</span></td><td style='text-align: center;'><div style='display: inline;'><img class='goUp' id='up"+v.id+"' src='img/go_Up.png' style='width: 20px;'></div><div style='display: inline;'><img class='goDown' id='down"+v.id+"' src='img/go_down.png' style='width: 20px;'></div><div style='display: inline;'><img class='rmvNew' id='"+v.id+"' src='img/remove.png'></div></td>"		
+			tr.innerHTML = "<td><span>"+v.position+"</span></td><td id='"+v.id+"' class='edit' style='cursor: pointer;'><span>"+v.name+"</span></td><td style='text-align: center;'><div style='display: inline;'><img class='goUp' id='up"+v.id+"' src='img/go_Up.png' style='width: 20px;'></div><div style='display: inline;'><img class='goDown' id='down"+v.id+"' src='img/go_down.png' style='width: 20px;'></div><div style='display: inline;'><img class='rmvNew' id='"+v.id+"' src='img/remove.png'></div></td>"		
 			
 			
 			document.getElementById("newsList").appendChild(tr);	
