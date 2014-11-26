@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Código del Sur</title>
+		
+		<!-- To allow your media queries to take full effect a typical mobile-optimized site contains something like the following: -->
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		
+		<link rel="stylesheet" type="text/css" href="webCDS.css">
+		
+		<!-- Para SCROLL -->
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!--script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script-->
+		<script type="text/javascript" src="js/scrollTo.js"></script>
+		
+		<!-- Para SECCIONES -->
+		<script type="text/javascript" src="js/portfolio.js"></script>
+		<script type="text/javascript" src="js/staff-effect.js"></script>
+		<script type="text/javascript" src="js/staff.js"></script>		
+		<script type="text/javascript" src="js/news.js"></script>
+		<script type="text/javascript" src="js/service.js"></script>
+		<script type="text/javascript" src="js/clients.js"></script>
+		<script type="text/javascript" src="js/about.js"></script>
+			<script type="text/javascript" src="js/mail.js"></script>
+		<!-- Para SLIDES -->
+		<script type="text/javascript" src="js/slides.js"></script>		<!-- about us-->
+		<script type="text/javascript" src="js/slides-portfolio.js"></script>
+		
+		
+			<!--jCarousel library
+		        <link rel="stylesheet" type="text/css" href="css/demo.css" />-->
+				<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+				<link rel="stylesheet" type="text/css" href="css/custom.css" />
+				<script src="js/modernizr.custom.17475.js"></script>
+				<script src="js/jquery.lazyload.js"></script>
+			<!--Carousel Simple 02-->
+				<link rel="stylesheet" type="text/css" href="" />
+				<script>
+				 jQuery(document).ready(function(){					
+					iniciarPorfolio();
+					iniciarStaff();
+					iniciarServices();
+					iniciarClients();
+					iniciarNews();
+					iniciarAbout();
+					
+					
+				 });
+			$(function() {
+				$("img").lazyload({placeholder : "Img/loading.gif", threshold : 100});
+			});
+				</script>
+				<script type="text/javascript">
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script>
+				<script type="text/javascript">
+    
+				try {
+					var pageTracker = _gat._getTracker("UA-26554738-1");
+					pageTracker._trackPageview();
+				} catch(err) {}
+				</script>
+	</head>
+	
+	<body>
+		
+		<header>
+			<!-- Barra de menu -->
+			<nav id="menu">  
+				<ul>
+					<li class="logo"><a href="#divInfo"></a></li>
+					<li class="secondline ceroli"><a id="first" href="#divPortfolio">Portfolio</a></li>
+					<li class="secondline firstli"><a href="#divServices">Services</a></li>
+					<li class="thirdline secondli"><a href="#divClients">Clients</a></li>
+					<li class="thirdline thirdli"><a href="#divAboutUs">About us</a></li>
+					<li class="thirdline fourthli"><a href="#divContactUs">Contact us</a></li>
+				</ul>
+			
+			</nav>
+			<!-- ¿ Link a tweeter y facebook ? -->
+			<nav id="iconos"> 
+				<ul>
+					
+					<li><a class="otherLink" href="https://twitter.com/codigodelsur" target="_blank"><img src="img/nav_tweeter.png"/></a></li>
+					<li><a class="otherLink" href="https://www.facebook.com/CodigoDelSur?fref=ts" target="_blank"><img src="img/nav_facebook.png"/></a></li>
+				</ul>
+			</nav>
+		</header>
+		
+			<div id="divHome">
+            
+				<section id="divInfo">
+					<div id="slogan"><img src="img/home_text.png" /></div>
+					<div id="icono_talk"></div>
+					<div id="logo_large"><img src="img/logo_large.png" /></div>
+				<!--	<div id="animVideo"></div>	-->
+				</section>
+            
+				<div id="video"><iframe  frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="http://player.vimeo.com/video/59991415?title=0&amp;amp;byline=0&amp;amp;portrait=0" id="vimeo1"></iframe></div>
+			</div>
+			
+		<!-- PORTFOLIO -->
+			<div id="divPortfolio">
+				<section id="SecPortfolio">
+					<div id="titles"><h2 id="Portfolio">Portfolio /</h2><h3 class="subtitle">Our excellent work...</h3></div>
+					<div id="arrowsPort">
+						<ul>
+							<li class="btnleftPort"><a href="#"></a></li>
+							<li>titulo Porfolio</li>
+							<li class="btnrightPort"><a href="#"></a></li>
+						</ul>
+					</div>
+					<div id="btnPortfolio">
+						<ul>
+							<li class="btn-all" onclick="filter()"></li>
+							<li class="buttonPort btn-softw" onclick="filterSoftw()"></li>
+							<li class="buttonPort btn-labs" onclick="filterLabs()"></li>
+							<li class="buttonPort btn-webportfolio" onclick="filterWeb()"></li>
+							<li class="buttonPort btn-game" onclick="filterGame()"></li>
+							<li class="buttonPort btn-gd" onclick="filterGD()"></li>
+						</ul>
+					</div>						
+						
+							<a onClick="GoBackPortfolioItem()" class="btnleftPort"></a>
+							<a class="btnrightPort" onClick="GoNextPortfolioItem()"></a>
+							<div>
+									<ul class="TitlePortfolio">
+										<li id="1">Peakour</li>
+										<li id="2">Holiday Crowd</li>
+										<li id="3">Subway</li>
+										<li id="4">Cortexa</li>
+										<li id="5">Scavenger Hunt</li>
+										<li id="6">Iisis</li>
+										<li id="7">miPlan</li>
+										<li id="8">Push it Poker</li>
+										<li id="9">Count the Animals!</li>
+										<li id="10">Avon</li>
+										<li id="11">Event Wizard</li>
+										<li  id="12">Guess Phrase</li>
+										<li id="13">Fodessa</li>
+										<li id="14">Bit Kaput</li>
+										<li id="15">Office Depot</li>
+										<li id="16">The Sullivan Group</li>
+										<li id="17">Next Generation Education</li>
+										<li id="18">LiquidAdventure</li>
+										<li id="19">Engle</li>
+										<li id="20">Dittoze</li>
+										<li id="21">Skout for iPhone</li>
+										<li id="22">Skout for iPad</li>
+										<li id="23">Seacoast</li>
+										<li id="24">Findstoragefast</li>
+										<li id="25">Fun Time Timer</li>
+										<li id="26">edMobility</li>
+										<li id="27">Siffter</li>
+										<li id="28">MiJay</li>
+										<li id="29">Hurricane Forecaster</li>
+										<li id="30">Pinpoint Parking</li>
+										<li id="31">Facility Engineer</li>
+										<li id="32">Anything Detector</li>
+										<li id="33">Pea Yourself</li>
+										<li id="34">MathSpace</li>
+										<li id="35">iGrade Soccer</li>
+										<li id="36">Onehub</li>
+										<li id="37">Kindara</li>
+										<li id="38">Social Coaster</li>
+										<li id="39">Storyly</li>
+										<li id="40">Waltja</li>
+										<li id="41">ScandLearn</li>
+										<li id="42">Center for Dermatology</li>
+										<li id="43">Medical Apps</li>
+										<li id="44">eJudged</li>
+										<li id="45">ScandLearn</li>
+										<li id="46">Al Monitor</li>
+										<li id="47">Auerbach</li>
+										<li id="48">JSCAPE</li>
+										<li id="49">Volomio</li>
+										<li id="50">The Hub</li>
+										<li id="51">PlayTheGrid</li>
+										<li id="52">idScan GO</li>
+										<li id="53">MedicScan GO</li>
+										<li id="54">Live!y</li>
+										<li id="55">Titan</li>
+									</ul>
+								</div>
+							
+						
+					</div>
+					
+					<div id="PortFolioDesc" class="contInfoDesc450">
+						<ul class="InfoPortfolio">
+						<!--Peakour-->
+							<li id="cont1">
+								<img class="porfImg" data-original="img/workPeakour01.png"  src="img/loading.gif"/>
+								<p>An interactive game we developed for Gotta Pea® that represents 
+								strategy on the streets. Using the techniques of Parkour, this game
+								makes you think and reason while having fun! </p>
+							</li>
+						<!--Holiday Crowd-->
+							<li id="cont2">
+								<img class="porfImg" data-original="img/workHolidayCrowd01.png"  src="img/loading.gif"/>
+								<p>Holiday Crowd is a website developed in Java that connects 
+								Travellers with professional travel agents, providing interactive 
+								pages to create highly customizable trips. </p>
+								<p>We created everything from scratch - from the database 
+								design to the user interface and design, including the whole 
+								system’s logic. This site works with ajax powered javascript 
+								in order to give the user a smooth experience, so they can 
+								create complete trips without reloading pages. </p>
+								<p>It has a ‘powerful tag’ feature that allows trips to be
+								tagged and sent to relevant travel agents 
+								registered in the site, automatically sending emails to
+								travellers and agents when they receive bids on their requests or
+								comments on their bids, among many other possible notifications.</p>
+								<p>It is fully integrated with PayPal; travellers can book their 
+								trips through an online process.</p>
+				
+							</li>
+						
+						</ul>
+					</div>	
+					
+					
+					
+				<!-- Comienzan los Trabajos del porfolio -->					
+				<div class="workContainer">
+					<!-- Peakour -->
+					<div id="work01" class="work">					
+						<div class="imgSmall"><img src="img/workPeakour.png"></div>
+							<div class="iconType iconType02">
+								<ul>
+									<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+									<li class="iconTypeGame"><img src="img/portf_iconGame.png"></li>	<!-- Mobile Labs / Games -->
+								</ul>
+							</div>
+						<div class="titleSmall titleSmall01"><h6>Peakour</h6></div>
+ 					</div>					
+					<!-- Holiday Crowd -->
+					<div id="work02" class="work">					
+						<div class="imgSmall">
+							<img src="img/workHolidayCrowd.png" />
+						</div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeWeb"><img src="img/portf_iconWeb2.png" /></li>		<!-- Web -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Holiday Crowd</h6></div>
+ 					</div>					
+					<!-- Subway -->
+					<div id="work03" class="work">
+						<div class="imgSmall">
+							<img src="img/workSubWay.png" />
+						</div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Graphic Design -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Subway</h6></div>
+ 					</div>					
+					<!-- Cortexa -->
+					<div id="work04" class="work">
+						<div class="imgSmall ">
+							<img src="img/workCortexa.png" />
+						</div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeSoftw"><img src="img/portf_iconSoftw.png" /></li>		
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Cortexa</h6></div>
+ 					</div>					
+					<!-- 01 Peakour -->
+					<div id="hideWork01" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png" /></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png" /></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-01" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-01" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider01" class="slider">
+								<li><img src="img/workPeakour01.png"><img src="img/workPeakour02.png"></li>
+								<li><img src="img/workPeakour03.png"><img src="img/workPeakour04.png"></li>
+								<li><img src="img/workPeakour05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Peakour</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/peakour-for-iphone-ipod/id499899984?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>An interactive game we developed for Gotta Pea® that represents strategy on the streets. Using the techniques of Parkour, this game makes you think and reason while having fun! </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>iOS SDK, OpenGL ES, SQLite, Java, Tomcat, MySQL, Facebook API,  Facebook iOS SDK, OpenGL, JSONKit, Janrain integration, Push Notifications, TexturePacker, Client/server for Leaderboards, Multiple versions using the same code (iPhone free, iPhone paid, iPad free and iPad paid).</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 02 Holiday Crowd -->
+					<div id="hideWork02" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png" /></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png" /></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-02" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-02" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider02" class="slider slider01">
+								<li><img src="img/workHolidayCrowd04.png"></li>
+								<li><img src="img/workHolidayCrowd01.png"></li>
+								<li><img src="img/workHolidayCrowd02.png"></li>
+								<li><img src="img/workHolidayCrowd03.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Holiday Crowd</p></div>
+						<div class="infoWork"><p>Holiday Crowd is a website developed in Java that connects Travellers with professional travel agents, providing interactive pages to create highly customizable trips. 
+						<br><br>We created everything from scratch - from the database design to the user interface and design, including the whole system’s logic. This site works with ajax powered javascript in order to give the user a smooth experience, so they can create complete trips without reloading pages. 
+						<br><br>It has a ‘powerful tag’ feature that allows trips to be tagged and sent to relevant travel agents registered in the site, automatically sending emails to travellers and agents when they receive bids on their requests or comments on their bids, among many other possible notifications.
+						<br><br>It is fully integrated with PayPal; travellers can book their trips through an online process.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Java/JSP, XHTML, CSS, javascript, JQuery, AJAX, MySQL, Tomcat Server, PayPal API.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 03 Subway : falta tech -->
+					<div id="hideWork03" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"/></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"/></a></div>
+						<div class="gallery">
+							<ul id="slider03" class="slider slider01">
+								<li><img src="img/workSubWay01.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Subway</p></div>
+						<div class="infoWork"><p>The famous fast food organization, with branches in the UK, wanted a more professional, attractive, and organized look and feel to their website. The strategic planning was devoted to investigate the elements of the corporation’s identity and the values that make the brand. In this way, we were able to articulate these concepts with the imprint of the brand, achieving a very satisfactory result.</p></div>
+						<div class="lineDown"><img src="img/lineDownClients.png"/></div>
+					</div>					
+					<!-- 04 Cortexa -->
+					<div id="hideWork04" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="gallery">
+							<ul id="slider04" class="slider slider01">
+								<li><img src="img/workCortexa01.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Cortexa</p></div>
+						<div class="LinkStore01"><a href="http://www.cortexaautomation.com/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						<div class="infoWork"><p>Cortexa is a home management technology. With this software a user can manage their house from virtually anywhere, even when they’re not at home. It comes with a special hardware to be installed at the house, and a user interface that can be accessed from any pc, mac, or mobile device. 
+							<br><br>Some of the functionality it offers are: light control, thermostat control, security (alarm set up), irrigation, leak detection, cameras, audio, weather forecast, modes setup and programming
+							<br><br>We worked side by side with the client for almost seven months to developed some sections of the Energy Saving edition released on July 2011. 
+							<br><br>The project begun with the weather forecast service, that consisted in finding a proper free online weather provider and integrating it with the Cortexa software.
+							<br><br>We also developed the mode system, which is one of the featured functionalities of the new version. This system allows one to set up different modes for the house. Each mode has a group of dispositions that sets default temperatures, lighting, and irrigation when the mode is activated. 
+							<br><br>We also helped them develop a prototype to present for a hospitality project, being Cortexa’s next big challenge in this industry: to develop a similar system for hotels.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Javascript (client side), Javascript (spidermonkey engine - server side), Dojo toolkit, HTML, Document oriented database with Json queries.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					<!-- Scavenger Hunt -->
+					<div id="work05" class="work">
+						<div class="imgSmall"><img src="img/workScavenger.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>	<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Scavenger Hunt</h6></div>
+ 					</div>					
+					<!-- Iisis -->
+					<div id="work06" class="work">
+						<div class="imgSmall"><img src="img/workIisis.png"/></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeSoftw"><img src="img/portf_iconSoftw.png"/></li>	<!-- Software -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Iisis</h6></div>
+ 					</div>					
+					<!-- miPlan -->
+					<div id="work07" class="work">
+						<div class="imgSmall"><img src="img/workMiPlan.png"/></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class=" iconTypeWeb"><img src="img/portf_iconWeb2.png"/></li>		<!-- Web -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>miPlan</h6></div>
+ 					</div>					
+					<!-- Push it Poker -->
+					<div id="work08" class="work">
+						<div class="imgSmall"><img src="img/workPushItPoker.png"/></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"/></li>
+								<li class="iconTypeGame"><img src="img/portf_iconGame.png"/></li>	<!-- Mobile Labs / Games -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Push it Poker</h6></div>
+ 					</div>				
+					<!-- 05 Scavenger Hunt -->
+					<div id="hideWork05" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"/></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"/></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-05" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-05" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider05" class="slider slider03">
+								<li><img src="img/workScavenger01.png"/><img src="img/workScavenger02.png"/></li>
+								<li><img src="img/workScavenger03.png"/><img src="img/workScavenger04.png"/></li>
+								<li><img src="img/workScavenger05.png"/></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Scavenger Hunt</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/pro-scavenger-hunt/id566413517?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>ProScavengerHunt is a customizable iPhone/iPad app that allows you to create your own Scavenger Hunt or Treasure Hunt and easily distribute and manage the hunt on all the iOS devices of the participants.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>MessageUI Framework, AssetsLibrary Framework, CoreLocation Framework, Mapkit Framework</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 06 Iisis -->
+					<div id="hideWork06" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-06" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-06" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider06" class="slider slider01">
+								<li><img src="img/workIisis01.png"></li>
+								<li><img src="img/workIisis02.png"></li>
+								<li><img src="img/workIisis03.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Iisis</p></div>
+						<div class="infoWork"><p>IISIS is a powerful, web-based software that brings clinical collaboration and remote patient monitoring to a new level.
+						<br><br>IISIS is designed to provide clinics with ultimate access to medical device data. IISIS displays device and patient data, alarms and real time waveforms which can be accessed from a central monitoring workstation within the hospital (intranet) or remotely from anywhere, anytime, through a secure authorized internet connection.
+						<br><br>We developed the entire mobile application and currently provide support, maintenance, and add new functionalities for the whole software.
+						<br><br>Additionally they asked us to develop another application called "Partners Portal" intended to upload and manage sensitive documents and facilitate their delivery in a secure manner to vendor credentialing services or hospital HR departments.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>FlashBuilder 4.5.1(mobile), Java+Hibernate (server side), BlazeDS, Adobe Flex(user interface), Action Script.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 07 miPlan -->
+					<div id="hideWork07" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-07" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-07" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider07" class="slider slider01">
+								<li><img src="img/workMiPlan01.png"></li>
+								<li><img src="img/workMiPlan02.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>miPlan</p></div>
+						<div class="LinkStore01"><a href="http://www.miplan.com.au/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						<div class="infoWork"><p>miPlan is a website developed in wordpress with custom PHP backend where customers fill out different forms by answering questions in order to apply for life insurance cover. 
+							<br><br>We developed the ‘apply’ section with backend processes in PHP, that checks if the user complies with the application needs and calculates estimated quotes for different types of insurances.
+							</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>WordPress, HTML, CSS, Javascript, PHP, Apache server.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 08 Push it Poker -->
+					<div id="hideWork08" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-08" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-08" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery02">
+							<ul id="slider08" class="slider slider02">
+								<li><img src="img/workPushItPoker01.png"><img src="img/workPushItPoker02.png"></li>
+								<li><img src="img/workPushItPoker03.png"><img src="img/workPushItPoker04.png"></li>
+								<li><img src="img/workPushItPoker05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Push it Poker</p></div>
+						<div class="infoWork"><p>One of our masterpieces! A complex application developed completely by us from ground up. It is a multiplayer iPhone app that lets people play poker online. You can have a list of contacts to play with, chat while playing the games, and invite friends via Facebook. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>IOS SDK, PHP, MySQL, Facebook API, Facebook iOS SDK, AddressBook Framework, AdWhirl, InMobi, ZestADZ, Greystripe Ads, Mobclix, Push Notifications, JSONKit, Multiple versions (free and paid) using same code.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>	
+					<!--  Count the Animals! -->
+					<div id="work09" class="work">
+						<div class="imgSmall"><img src="img/workCountAnimals.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+								<li class="iconTypeGame"><img src="img/portf_iconGame.png"></li>		<!-- Mobile Labs / Games -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall02"><h6>Count the Animals!</h6></div>
+ 					</div>					
+					<!-- Avon -->
+					<div id="work10" class="work">
+						<div class="imgSmall"><img src="img/workAvon.png"></div>
+						<div class="iconType iconType01"><ul>
+							<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>	<!-- Graphic Design -->
+						</ul></div>
+						<div class="titleSmall titleSmall01"><h6>Avon</h6></div>
+ 					</div>					
+					<!-- Event Wizard -->
+					<div id="work11" class="work">
+						<div class="imgSmall"><img src="img/workEventWizard.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeSoftw"><img src="img/portf_iconSoftw.png"></li>		<!-- Software -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Event Wizard</h6></div>
+ 					</div>					
+					<!-- Guess Phrase -->
+					<div id="work12" class="work">
+						<div class="imgSmall"><img src="img/workGuessPhrase.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+								<li class="iconTypeGame"><img src="img/portf_iconGame.png"></li>	<!-- Mobile Labs / Games -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Guess Phrase</h6></div>
+ 					</div>					
+					<!-- 09 Count the Animals! : falta tech -->
+					<div id="hideWork09" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-09" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-09" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider09" class="slider slider03">
+								<li><img src="img/workCountAnimals01.png"></li>
+								<li><img src="img/workCountAnimals02.png"></li>
+								<li><img src="img/workCountAnimals03.png"></li>
+								<li><img src="img/workCountAnimals04.png"></li>
+								<li><img src="img/workCountAnimals05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Count the Animals!</p></div>
+						<div class="LinkStore01"><a href="http://itunes.apple.com/us/app/count-the-animals!/id452226295?ls=1&mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>The cutest iPad and iPhone application created! It helps kids learn how to count up to 20 in 20 languages. We were selected to develop from scratch the client’s first application, including character animations that were provided in Flash and implemented in iOS platforms.</p></div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 10 Avon : falta tech -->
+					<div id="hideWork10" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="gallery">
+							<ul id="slider10" class="slider slider01">
+								<li><img src="img/workAvon01.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Avon</p></div>
+						<div class="infoWork"><p>As part of the campaign against breast cancer, Avon proposed a major event in different U.S. cities. To promote it, we were chosen to carry out this campaign through the design of visual interface, landing pages and newsletters.The result was a success.</p></div>
+						
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 11 Event Wizard -->
+					<div id="hideWork11" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-11" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-11" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider11" class="slider slider01">
+								<li><img src="img/workEventWizard01.png"></li>
+								<li><img src="img/workEventWizard02.png"></li>
+								<li><img src="img/workEventWizard03.png"></li>
+								<li><img src="img/workEventWizard04.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Event Wizard</p></div>
+						<div class="infoWork"><p>System that facilitates and automates the purchase of tickets for events (music, sports and more) from sites like Ticketmaster. It parses information from seller’s pages located in the United States, handling five different ticket provider companies.
+							<br><br>When you enter a specific event, it shows information such as the URL where the purchase will be made. Then, as you set different parameters like number of tickets to be collected, location, price range, and date it expires, etc. the program searches for entries that meet the requirements. When found, the information is displayed and the option to purchase is enabled.
+							</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Visual Studio 2008, C# (.NET framework), MySQL, Tortoise, CSS, JavaScrip</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 12 Guess Phrase -->
+					<div id="hideWork12" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-12" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-12" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider12" class="slider slider04">
+								<li><img src="img/workGuessPhrase01.png"></li>
+								<li><img src="img/workGuessPhrase02.png"></li>
+								<li><img src="img/workGuessPhrase03.png"></li>
+								<li><img src="img/workGuessPhrase04.png"></li>
+								<li><img src="img/workGuessPhrase05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Guess Phrase</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/guess-phrase/id381447242?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>In this iPad and iPhone application a group of users play to guess the words that are displayed on the device. The system allows communication and synchronization of multiple devices simultaneously, where you can play the game distributed through a point-to-point connection. It also allows the execution of online games by using the GameCenter system of the iPhone. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>IOS SDK, GameCenter, Bluetooth</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>	
+					<!-- Fodessa -->
+					<div id="work13" class="work">
+						<div class="imgSmall"><img src="img/workFodessa.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeWeb"><img src="img/portf_iconWeb2.png"></li>		<!-- Web / Mobile Labs-->
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Fodessa</h6></div>
+ 					</div>					
+					<!-- Bit Kaput -->
+					<div id="work14" class="work">
+						<div class="imgSmall"><img src="img/workBitKaput.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+								<li class="iconTypeGame"><img src="img/portf_iconGame.png"></li>	<!-- Mobile Labs / Games -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Bit Kaput</h6></div>
+ 					</div>					
+					<!-- Office Depot -->
+					<div id="work15" class="work">
+						<div class="imgSmall"><img src="img/workOfficeDepot.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Graphic Design -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Office Depot</h6></div>
+ 					</div>					
+					<!-- The Sullivan Group -->
+					<div id="work16" class="work">
+						<div class="imgSmall"><img src="img/workTSG.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeWeb"><img src="img/portf_iconWeb2.png"></li>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Web / Graphic Design-->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall02"><h6>The Sullivan Group</h6></div>
+ 					</div>					
+					<!-- 13 Fodessa : falta tech -->
+					<div id="hideWork13" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-13" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-13" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider13" class="slider slider01">
+								<li><img src="img/workFodessa01.png"></li>
+								<li><img src="img/workFodessa02.png"></li>
+								<li><img src="img/workFodessa03.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Fodessa</p></div>
+						<div class="LinkStore01"><a href="https://www.fodessa.com/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						<div class="infoWork"><p>Fodessa is a group ecommerce website for gifts where you can add all your contacts from different social networks and register important occasions. This platform will not only remind you of these important occasions, but will suggest gift ideas, based on your contacts’ wish lists, and provide you with shipping information and a budget. Basically, it will significantly reduce the time required to do all your gift shopping! “Fodessa aims to pioneer the first platform that can perform your shopping for special occasions and holidays”
+						<br><br>We’ve been working on re-designing and developing this ecommerce website. We’ve also developed its iOS mobile application from scratch.</p></div>
+						
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 14 Bit Kaput : falta tech -->
+					<div id="hideWork14" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-14" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-14" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery02">
+							<ul id="slider14" class="slider slider02">
+								<li><img src="img/workBitKaput01.png"><img src="img/workBitKaput02.png"></li>
+								<li><img src="img/workBitKaput03.png"><img src="img/workBitKaput04.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Bit Kaput</p></div>
+						<div class="infoWork"><p>A joint development with Laboratoon. This app simulates a very bad bug inside your iPhone and the thrill of trying to destroy it before it destroys your phone (don’t worry, it is inoffensive!). This was a really cool and challenging app we loved developing. </p></div>
+						
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					
+					<!-- 15 Office Depot -->
+					<div id="hideWork15" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-15" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-15" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider15" class="slider slider01">
+								<li><img src="img/workOfficeDepot01.png"></li>
+								<li><img src="img/workOfficeDepot02.png"></li>
+								<li><img src="img/workOfficeDepot03.png"></li>
+								<li><img src="img/workOfficeDepot04.png"></li>
+								<li><img src="img/workOfficeDepot05.png"></li>
+								<li><img src="img/workOfficeDepot06.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Office Depot</p></div>
+						<div class="infoWork"><p>We were hired to create business cards for Office Depot’s web app. Here you can see a few of our designs.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Adobe Illustrator and Photoshop</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					
+					<!-- 16 The Sullivan Group -->
+					<div id="hideWork16" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-16" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-16" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider16" class="slider slider01">
+								<li><img src="img/workTSG01.png"></li>
+								<li><img src="img/workTSG02.png"></li>
+								<li><img src="img/workTSG03.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>The Sullivan Group</p></div>
+						<div class="LinkStore01"><a href="http://www.thesullivangroup.com/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						<div class="infoWork"><p>The Sullivan Group is an online course website for doctors aimed at the legal side of medicine. We have worked on multiple functionalities of the site, creating new sections and improving the performance of others. Today we continue working side by side with this client.  Some of the tasks we developed for the site are: 
+							<br><br>- Unified course: Database structure re-designed to improve performance.
+							<br>- Course edition utility: Created an online course editing utility with a WYSIWYG, where doctors can create their own courses in a user-friendly interface.
+							<br>- Unified gateway: Created a gateway system so The Sullivan Group can sell to multiple hospitals a customized (colors, fonts, banners, etc.) system with their courses.
+							<br>- Risk Safety Quality: A program The Sullivan Group sells to hospitals, which contains pages with information. The whole program and pages were created and designed by us.
+							<br><br>Now, we’ve developed the OB Audit, a medical auditing system in the areas of gynecology, maternity and pregnancy. This system counts with administrator and auditor sites that feature dynamic forms which, according to the different answers the auditors provide, adapt  based on a complex logic branching configurable by the administrators. 
+							<br><br>The system supports multiple organizations, with their relevant forms, and a group of hospitals that can be distributed under different layers. All can be set up by a super admin that manages the whole system setup. The sites also include reports and graphics that provide a friendly and intuitive vision of the audit results, easily detecting the strengths and weaknesses of the doctors.
+							</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>ASP, SQL Server 2005, JavaScript, HTML/CSS, Ajax, IIS 6.0, jQuery.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>				
+					<!-- Next Generation Education -->
+					<div id="work17" class="work">
+						<div class="imgSmall"><img src="img/workNGE.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeWeb"><img src="img/portf_iconWeb2.png"></li>	<!-- Web -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall02"><h6>Next Generation Education</h6></div>
+ 					</div>					
+					<!-- LiquidAdventure -->
+					<div id="work18" class="work">
+						<div class="imgSmall"><img src="img/workLiquidAdv.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+								<li class="iconTypeGame"><img src="img/portf_iconGame.png"></li>	<!-- Mobile Labs / Games -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>LiquidAdventure</h6></div>
+ 					</div>					
+					<!-- Engle -->
+					<div id="work19" class="work">
+						<div class="imgSmall"><img src="img/workEngle.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+								<li class="iconTypeGame"><img src="img/portf_iconGame.png"></li>	<!-- Mobile Labs / Games -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Engle</h6></div>
+ 					</div>					
+					<!-- Dittoze -->
+					<div id="work20" class="work">
+						<div class="imgSmall"><img src="img/workPuzzleTown.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeSoftw"><img src="img/portf_iconSoftw.png"></li>		<!-- Software -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Dittoze</h6></div>
+ 					</div>					
+					<!-- 17 Next Generation Education : falta agregar info -->
+					<div id="hideWork17" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-17" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-17" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider17" class="slider slider01">
+								<li><img src="img/workNGE00.png"></li>
+								<li><img src="img/workNGE01.png"></li>
+								<li><img src="img/workNGE02.png"></li>
+								<li><img src="img/workNGE03.png"></li>
+								<li><img src="img/workNGE04.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Next Generation Education</p></div>
+						<div class="infoWork"><p>First iPhone game developed and published by 
+						CodigoDelSur. An addictive game for both little kids and grown-ups. The idea, concept, and design
+						were all done by our team at the start of our iPhoneLabs project. We are very proud of this 
+						development because it was the first of many games that came afterwards (which were successfully
+						developed) becoming our great pride.</p></div>
+					
+					
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					
+					<!-- 18 LiquidAdventure : falta tech -->
+					<div id="hideWork18" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-18" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-18" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery02">
+							<ul id="slider18" class="slider slider02">
+								<li><img src="img/workLiquidAdv01.png"><img src="img/workLiquidAdv02.png"></li>
+								<li><img src="img/workLiquidAdv03.png"><img src="img/workLiquidAdv04.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>LiquidAdventure</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/liquidadventure/id374792448?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>First iPhone game developed and published by CodigoDelSur. An addictive game for both little kids and grown-ups. The idea, concept, and design were all done by our team at the start of our iPhoneLabs project. We are very proud of this development because it was the first of many games that came afterwards (which were successfully developed) becoming our great pride.</p></div>
+					
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					
+					<!-- 19 Engle : falta tech -->
+					<div id="hideWork19" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-19" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-19" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider19" class="slider slider04">
+								<li><img src="img/workEngle01.png"></li>
+								<li><img src="img/workEngle02.png"></li>
+								<li><img src="img/workEngle03.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Engle</p></div>
+						<div class="LinkStore01"><a href="http://englegames.com/E1/Engle_Dont_Get_Puzzled..html" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						<div class="infoWork"><p>iPad 2D puzzle with real physics where users can play with puzzles like never before. With gravity feel and 25 levels, it is the perfect application for real fanatics that want to take puzzles to the next level. We were in charge of the development of the application from scratch, including advertisement integration and user rankings.</p></div>
+						
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					
+					<!-- 20 Dittoze -->
+					<div id="hideWork20" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>				
+						<div class="gallery">
+							<ul id="slider20" class="slider slider01">
+								<li><img src="img/workPuzzleTown01.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Dittoze</p></div>
+						<div class="infoWork"><p>This web development was done completely from scratch for a stuffed animal factory.The project was to develop a virtual world for children under 12 where they could create their own houses and decorate them by adding furniture, painting the walls, adding pets, and much more. The project included functionality development as well as programming games in Java and integrating them. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>J2EE, EJB, servlets, and all what is related to Java technologies.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>				
+					<!-- Skout for iPhone -->
+					<div id="work21" class="work">
+						<div class="imgSmall"><img src="img/workSkout.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>	<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Skout for iPhone</h6></div>
+ 					</div>					
+					<!-- Skout for iPad -->
+					<div id="work22" class="work">
+						<div class="imgSmall"><img src="img/workSkoutiPad.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>	<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Skout for iPad</h6></div>
+ 					</div>					
+					<!-- Seacoast -->
+					<div id="work23" class="work">
+						<div class="imgSmall"><img src="img/workSeacoast.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeWeb"><img src="img/portf_iconWeb2.png"></li>		<!-- Web -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Seacoast</h6></div>
+ 					</div>					
+					<!-- Findstoragefast -->
+					<div id="work24" class="work">
+						<div class="imgSmall"><img src="img/workFindStorage.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeSoftw"><img src="img/portf_iconSoftw.png"></li>		<!-- Software -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Findstoragefast</h6></div>
+ 					</div>					
+					<!-- 21 Skout for iPhone -->
+					<div id="hideWork21" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-21" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-21" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery02">
+							<ul id="slider21" class="slider slider02">
+								<li><img src="img/workSkout01.png"><img src="img/workSkout02.png"></li>
+								<li><img src="img/workSkout03.png"><img src="img/workSkout04.png"></li>
+								<li><img src="img/workSkout05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Skout for iPhone</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/skout/id302324249?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>We worked on the iPhone versions of this widely known (more than two million users) network application for meeting new people and having fun. We have been developing client-side using Objective-C, mainly working on the GUI logic. Some of its remarkable features are: integrated chat, location based, and in-app points.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>AdMob, Tapjoy, CoreLocation Framework, AddressBook Framework, Client/server, Push Notifications.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 22 Skout for iPad -->
+					<div id="hideWork22" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-22" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-22" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider22" class="slider">
+								<li><img src="img/workSkoutiPad01.png"><img src="img/workSkoutiPad02.png"></li>
+								<li><img src="img/workSkoutiPad03.png"><img src="img/workSkoutiPad04.png"></li>
+								<li><img src="img/workSkoutiPad05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Skout for iPad</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/skout/id302324249?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>Taking this cool and famous application to another platform - which will give iPad users the possibility to keep meeting new people. For us it means we have done a good job and we are very excited the we were selected for this next stage!</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>AdMob, Tapjoy, CoreLocation Framework, AddressBook Framework, Client/server, Push Notifications.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 23 Seacoast -->
+					<div id="hideWork23" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-23" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-23" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider23" class="slider slider01">
+								<li><img src="img/workSeacoast01.png"></li>
+								<li><img src="img/workSeacoast02.png"></li>
+								<li><img src="img/workSeacoast03.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Seacoast</p></div>
+						<div class="LinkStore01"><a href="http://www.seacoast.com/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						<div class="infoWork"><p>Seacoast.com is an e-commerce that specializes in helping people achive proper nutrition and natural health (all based on clinical research), through a catalog of Vitamins, Supplements, Herbs and Minerals. Among other tasks, we re-implemented the Q&A system and added a voting system to this section. Also, we integrated the site with Facebook, added AJAX to the shopping cart to delete and change items from the list, we improved the security system and implemented a products tag system. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>PHP, MySQL, SOLR, CouchDB, jQuery, Bootstrap</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 24 Findstoragefast -->
+					<div id="hideWork24" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>						
+						<div class="gallery">
+							<ul id="slider24" class="slider slider01">
+								<li><img src="img/workFindStorage01.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Findstoragefast</p></div>
+						<div class="LinkStore01"><a href="http://www.findstoragefast.com/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						<div class="infoWork"><p>Application that detects the user’s location and provides a map with different storage companies available in the area. The project was to redesign the site and develop the booking functionality through the web site.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>JavaScript, HTML/CSS, JSP, Spring, iBatis, Google Maps, MySQL.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					<!-- Fun Time Timer -->
+					<div id="work25" class="work">
+						<div class="imgSmall"><img src="img/workFunTime.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Graphic Design / Mobile Labs-->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Fun Time Timer</h6></div>
+ 					</div>					
+					<!-- edMobility -->
+					<div id="work26" class="work">
+						<div class="imgSmall"><img src="img/workEdMobility.png"></div>
+						<div class="iconType iconType03">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+								<li class="iconTypeWeb"><img src="img/portf_iconWeb2.png"></li>		<!-- Web / Mobile Labs / Graphic Design -->
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>edMobility</h6></div>
+ 					</div>					
+					<!-- Siffter -->
+					<div id="work27" class="work">
+						<div class="imgSmall"><img src="img/workSiffter.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Siffter</h6></div>
+ 					</div>					
+					<!-- MiJay -->
+					<div id="work28" class="work">
+						<div class="imgSmall"><img src="img/workMiJay.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>MiJay</h6></div>
+ 					</div>					
+					<!-- 25 Fun Time Timer -->
+					<div id="hideWork25" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-25" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-25" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider25" class="slider">
+								<li><img src="img/workFunTime01.png"><img src="img/workFunTime02.png"></li>
+								<li><img src="img/workFunTime03.png"><img src="img/workFunTime04.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Fun Time Timer</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/fun-time-timer/id652296774?l=es&ls=1&mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>An app to help kids with GDD and Autism manage time in a better way. This was not a client, but a project we decided to do pro-bono with Laura Corvalan, a specialist in autism. The project was her idea, we just made it come true! </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Adobe Illustrator</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 26 edMobility -->
+					<div id="hideWork26" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-26" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-26" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider26" class="slider slider01">							
+								<li><img src="img/workEdMobility04.png"></li>
+								<li><img src="img/workEdMobility01.png"></li>
+								<li><img src="img/workEdMobility02.png"></li>
+								<li><img src="img/workEdMobility03.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>edMobility</p></div>
+						<div class="LinkStore01"><a href="http://201.217.143.194:8085/edMobility/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						
+						<div class="infoWork"><p>CRM (Customer Relationship Management) for schools. The client noticed the need to have a system to help organize and have better control over school charity functions, campaigns, and fundraisers. Through this CRM, all people who are related to the school (parents, students, teachers, etc) can connect with others and add/share relevant information with their group.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Java, Jersey, REST webservices, HTML, Javascript, JQuery, CSS, MySQL (Plataforms: Java Virtual Machine, PhoneGap, Sencha)</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 27 Siffter -->
+					<div id="hideWork27" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-27" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-27" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery02">
+							<ul id="slider27" class="slider slider02">
+								<li><img src="img/workSiffter01.png"><img src="img/workSiffter02.png"></li>
+								<li><img src="img/workSiffter03.png"><img src="img/workSiffter04.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Siffter</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/uy/app/siffter/id458425780?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>iPhone application where users can post and vote on simple surveys. 
+						It has a php server with MySQL database that centralizes user information and surveys. 
+						The system interacts with Facebook and Twitter to get votes and post surveys. We were responsible
+						of the full development and testing of the application and continue enhancing it. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>IOS SDK, PHP, MySQL, Facebook API, Twitter API</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 28 MiJay -->
+					<div id="hideWork28" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-28" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-28" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery02">
+							<ul id="slider28" class="slider slider02">
+								<li><img src="img/workMiJay01.png"><img src="img/workMiJay02.png"></li>
+								<li><img src="img/workMiJay03.png"><img src="img/workMiJay04.png"></li>
+								<li><img src="img/workMiJay05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>MiJay</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/br/app/mijay/id343341391?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>Mijay is a music social networking application that allows you to view and share the music your friends are listening to on their iPhone and iPod touch in real-time. The client trusted us with doing the maintenance and bug fixing of this application. We also added some new features and changed all the images for high resolution images so it supports the new iPod and iPhone 4 Retina displays.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>IOS SDK, XCode Interface Builder, SQLite, Facebook API , Twitter Rest Api and  IOS Frameworks: MPMusicPlayerController, Accounts (iOS 5),Twitter (iOS 5), CoreData Framework, Accounts Framework, Facebook iOS SDK, MediaPlayer Framework, Client/server, MessageUI Framework, AddressBook Framework, Push Notifications, Syncs device's music with server.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- Hurricane Forecaster -->
+					<div id="work29" class="work">
+						<div class="imgSmall"><img src="img/workHurricane.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>	<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall02"><h6>Hurricane Forecaster</h6></div>
+ 					</div>					
+					<!-- Pinpoint Parking -->
+					<div id="work30" class="work">
+						<div class="imgSmall"><img src="img/workParking.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Pinpoint Parking</h6></div>
+ 					</div>					
+					<!--  Facility Engineer -->
+					<div id="work31" class="work">
+						<div class="imgSmall"><img src="img/workFacilityEngineer.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Facility Engineer</h6></div>
+ 					</div>					
+					<!-- Anything Detector -->
+					<div id="work32" class="work">
+						<div class="imgSmall"><img src="img/workAnythgDetector.png"></a></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Anything Detector</h6></div>
+ 					</div>					
+					<!-- 29 Hurricane Forecaster -->
+					<div id="hideWork29" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="gallery gallery02">
+							<ul id="slider29" class="slider">
+								<li><img src="img/workHurricane01.png" style="padding: 0px 0px;"><img src="img/workHurricane02.png"style="padding: 0px 0px;"><img src="img/workHurricane03.png"style="padding: 0px 0px;"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Hurricane Forecaster</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/hurricane-forecaster/id398409954?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>iPhone application that provides hurricane forecasts. The predictions are obtained from a web service provided by the National Weather Service of the USA and are displayed on a map indicating route, danger zone, and precision of the prediction.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>IOS SDK, MapKit, Client/server.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 30 Pinpoint Parking -->
+					<div id="hideWork30" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-30" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-30" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider30" class="slider slider02">
+								<li><img src="img/workParking01.png"><img src="img/workParking02.png"></li>
+								<li><img src="img/workParking03.png"></li>
+								<li><img src="img/workParking04.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Pinpoint Parking</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/pinpoint-parking-free/id404799282?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>Another useful iPhone application for those who easily forget where they parked their car. With this app, the user can record on a map the location of his/her vehicle. The app indicates at all times the distance between the vehicle, the device, and the address. You can also view a picture and description of the parking site. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>IOS SDK, MapKit, GeoLocation.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 31 Facility Engineer -->
+					<div id="hideWork31" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-31" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-31" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider31" class="slider slider02">
+								<li><img src="img/workFacilityEngineer01.png"><img src="img/workFacilityEngineer02.png"></li>
+								<li><img src="img/workFacilityEngineer03.png"><img src="img/workFacilityEngineer04.png"></li>
+								<li><img src="img/workFacilityEngineer05.png"><img src="img/workFacilityEngineer06.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Facility Engineer</p></div>
+						<div class="LinkStore01"><a href="https://play.google.com/store/apps/details?id=com.sencha.hello" target="_blank"><img src="img/iconGooglePlay.png"></a></div>
+						<div class="infoWork"><p>This app provides, at the fingertips of the user,  the necessary methods and solutions to properly calculate formulas which ensure the proper function of these operational systems (e.g. electrical, mechanical, heating, air conditioning). Reference tables for critical electrical and mechanical systems are also included in this application.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Phonegap, Sencha touch, CSS, Javascript (Platforms: Android, iPhone e iPad)</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 32 Anything Detector : falta tech -->
+					<div id="hideWork32" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-32" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-32" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider32" class="slider slider02">
+								<li><img src="img/workAnythgDetector01.png"><img src="img/workAnythgDetector02.png"></li>
+								<li><img src="img/workAnythgDetector03.png"><img src="img/workAnythgDetector04.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Anything Detector</p></div>
+						<div class="infoWork"><p>This was a very fun application we developed and designed as requested by client. It can be used to find anything you may need - from money to a cute girl, acting like if it was really working! Highly customizable and easy to use, this app can save your night or just provide some hilarious moments with your friends with the ‘Reverse Prank’ function.</p></div>
+						
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					<!-- Pea Yourself -->
+					<div id="work33" class="work">
+						<div class="imgSmall"><img src="img/workPeaYourself.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeWeb"><img src="img/portf_iconWeb2.png"></li>	<!-- Web -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Pea Yourself</h6></div>
+ 					</div>					
+					<!-- MathSpace -->
+					<div id="work34" class="work">
+						<div class="imgSmall"><img src="img/workMath.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>MathSpace</h6></div>
+ 					</div>					
+					<!-- iGrade Soccer -->
+					<div id="work35" class="work">
+						<div class="imgSmall"><img src="img/workiGrade.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>iGrade Soccer</h6></div>
+ 					</div>					
+					<!-- Onehub -->
+					<div id="work36" class="work">
+						<div class="imgSmall"><img src="img/workOnehub.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class=" iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Onehub</h6></div>
+ 					</div>					
+					<!-- 33 Pea Yourself : falta agregar info -->
+					<div id="hideWork33" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-33" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-33" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider33" class="slider slider01">
+								<li><img src="img/workPeaYourself01.png"></li>
+								<li><img src="img/workPeaYourself02.png"></li>
+								<li><img src="img/workPeaYourself03.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Pea Yourself</p></div>
+						<div class="LinkStore01"><a href="http://201.217.143.194:1234/peayourself/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						
+					
+						<div class="infoWork"><p>PeaYourself is a game from Peatown world for creating your Pea avatar. You can choose your Pea’s hair, eyes, nose, etc and then either save it as an image to your PC or share it through the different social networks. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Technologies: HTML5, Javascript, PHP.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 34 MathSpace: falta tech-->
+					<div id="hideWork34" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-34" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-34" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider34" class="slider">
+								<li><img src="img/workMath01.png"><img src="img/workMath02.png"></li>
+								<li><img src="img/workMath03.png"><img src="img/workMath04.png"></li>
+								<li><img src="img/workMath05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>MathSpace</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/app/id586612052?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>Mathspace allows students to complete full worked solutions to problems online and receive instant feedback and help at every step. It has a bank of over 10,000 interactive questions covering everything from addition to algebra, geometry to graphing, probability to statistics.</p></div>
+						
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 35 iGrade Soccer -->
+					<div id="hideWork35" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>						
+						<div class="gallery gallery01">
+							<ul id="slider35" class="slider slider01">
+								<li><img src="img/workiGrade01.png"><img src="img/workiGrade02.png"><img src="img/workiGrade03.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>iGrade Soccer</p></div>
+						<div class="infoWork"><p>Rated four stars on iSoccerApps.com, this application gives soccer coaches detailed and precise information on Players, Practices, Games, Attendance and More. The service we provided was maintenance, enhancement, and bug fixing. We added audio notes, fixed a database bug as well as a problem that was occurring with the notes feature, and implemented some design changes too. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>MessageUI Framework, MediaPlayer Framework, CoreData Framework, CorePlot, Reuse the same code for multiple versions.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 36 Onehub -->
+					<div id="hideWork36" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-36" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-36" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider36" class="slider slider04">
+								<li><img src="img/workOnehub01.png"><img src="img/workOnehub02.png"></li>
+								<li><img src="img/workOnehub03.png"><img src="img/workOnehub04.png"></li>
+								<li><img src="img/workOnehub05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Onehub</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/app/onehub/id476746131" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>Cloud storage taken to the iPhone. This iPhone app gives the possibility to access your files from anywhere you are with just an Internet connection. You can also download, print or share with others and control their use of the file!</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Download and preview files in-app, QuickLook Framework, MessageUI Framework, Client/server, AssetsLibrary Framework, TestFlight SDK, JSONKit.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>	
+					<!-- Kindara -->
+					<div id="work37" class="work">
+						<div class="imgSmall"><img src="img/workKindara.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>	<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Kindara</h6></div>
+ 					</div>					
+					<!-- Social Coaster -->
+					<div id="work38" class="work">
+						<div class="imgSmall"><img src="img/workSocialCoaster.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Graphic Design / Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Social Coaster</h6></div>
+ 					</div>					
+					<!-- Storyly -->
+					<div id="work39" class="work">
+						<div class="imgSmall"><img src="img/workStoryly.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Graphic Design / Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Storyly</h6></div>
+ 					</div>					
+					<!-- Waltja -->
+					<div id="work40" class="work">
+						<div class="imgSmall"><img src="img/workWaltja.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Waltja</h6></div>
+ 					</div>					
+					<!-- 37 Kindara -->
+					<div id="hideWork37" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-37" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-37" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider37" class="slider slider04">
+								<li><img src="img/workKindara02.png"><img src="img/workKindara01.png"></li>
+								<li><img src="img/workKindara03.png"><img src="img/workKindara04.png"></li>
+								<li><img src="img/workKindara05.png"><img src="img/workKindara06.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Kindara</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/kindara-fertility/id522674372?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>Kindara is a graph application dedicated to helping women achieve better results with their fertility by practicing an effective way of natural birth control as well as becoming pregnant without medical procedures or side effects.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>MessageUI Framework, QuartzCore Framework, SenTestingKit Framework, CorePlot, Facebook iOS SDK, StoreKit Framework.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 38 Social Coaster : falta agregar info -->
+					<div id="hideWork38" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>					
+						<div class="gallery gallery02">
+							<ul id="slider38" class="slider slider02">
+								<li><img src="img/workSocialCoaster01.png"><img src="img/workSocialCoaster02.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Social Coaster</p></div>						
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					
+					<!-- 39 Storyly -->
+					<div id="hideWork39" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-39" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-39" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider39" class="slider slider03">
+								<li><img src="img/workStoryly01.png"></li>
+								<li><img src="img/workStoryly02.png"></li>
+								<li><img src="img/workStoryly03.png"></li>
+								<li><img src="img/workStoryly04.png"></li>
+								<li><img src="img/workStoryly05.png"></li>
+								<li><img src="img/workStoryly06.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Storyly</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/gb/app/storyly-for-ipad-your-digital/id540649061?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>This app includes a complete digital library of Hebrew children's books. Children can browse and listen to their favorite stories from their personalized library. Through this app, children can keep connected and enjoy all by themselves the Hebrew language and Israeli culture.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>client/server, Facebook iOS SDK, StoreKit Framework. Adobe Illustrator and Photoshop</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 40 Waltja : falta tech -->
+					<div id="hideWork40" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-40" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-40" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider40" class="slider">
+								<li><img src="img/workWaltja01.png"><img src="img/workWaltja02.png"></li>
+								<li><img src="img/workWaltja03.png"><img src="img/workWaltja04.png"></li>
+								<li><img src="img/workWaltja05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Waltja</p></div>
+						<div class="infoWork"><p>This Australian app has been made to facilitate and organize information of non-profit services provided to less fortunate aborigines in remote places.  A PhoneGap development that allows offline data collection and online database synchronization</p></div>
+						
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>				
+					<!-- ScandLearn -->
+					<div id="work41" class="work">
+						<div class="imgSmall"><img src="img/workOScandLearn.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Graphic Design -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>ScandLearn</h6></div>
+ 					</div>					
+					<!-- Center for Dermatology -->
+					<div id="work42" class="work">
+						<div class="imgSmall"><img src="img/workCenterDermatology.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeWeb"><img src="img/portf_iconWeb2.png"></li>		<!-- Web -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall02"><h6>Center for Dermatology</h6></div>
+ 					</div>					
+					<!-- Medical Apps : faltan img -->
+					<div id="work43" class="work">
+						<div class="imgSmall"><img src="img/workMedicalApps.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Medical Apps</h6></div>
+ 					</div>					
+					<!-- eJudged -->
+					<div id="work44" class="work">
+						<div class="imgSmall"><img src="img/workEjudged.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>eJudged</h6></div>
+ 					</div>					
+					<!-- 41 ScandLearn : falta agregar info -->
+					<div id="hideWork41" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>						
+						<div class="gallery">
+							<ul id="slider41" class="slider slider01">
+								<li><img src="img/workOScandLearn01.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>ScandLearn</p></div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 42 Center for Dermatology : falta agregar info -->
+					<div id="hideWork42" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-42" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-42" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider42" class="slider slider01">
+								<li><img src="img/workCenterDermatology01.png"></li>
+								<li><img src="img/workCenterDermatology02.png"></li>
+								<li><img src="img/workCenterDermatology03.png"></li>
+								<li><img src="img/workCenterDermatology05.png"></li>
+								<li><img src="img/workCenterDermatology06.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Center for Dermatology</p></div>
+						<div class="infoWork"><p>Entirely designed and developed by us from scratch</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>PHP, Joomla</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 43 Medical Apps -->
+					<div id="hideWork43" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-43" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-43" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider43" class="slider">
+								<li><img src="img/workMedicalApps01.png"><img src="img/workMedicalApps02.png"></li>
+								<li><img src="img/workMedicalApps03.png"><img src="img/workMedicalApps04.png"></li>
+								<li><img src="img/workMedicalApps05.png"><img src="img/workMedicalApps06.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Medical Apps</p></div>
+						<div class="infoWork"><p>iPad/Server applications for doctors, nurses, and anaesthetists to record patient data. The idea is to to replace current ‘paper’ processes at different health centers. 
+											<br><br>We initiated this project by developing a drug chart app for doctors to write medical prescriptions and patient information digitally instead of using paper forms; doctors can also generate templates in order to save time filling out the forms. 
+											<br><br>After this, we developed an anesthetic chart app to monitor different procedures during an operation. This includes a graph showing the patient’s vital signs (the patient is connected to a monitor that sends the information to the server). The anaesthetists can take annotations and indicate which drugs and in which doses are prescribing to the patient during the operation. 
+											<br><br>We also created a nurse app to register the conditions in which the patient arrives to the health center and assign the relevant physician.
+											</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Objective C, xCode, CorePlot, .NET, WCF Data Services v5.0, (Protocolo OData), WebServices. </p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 44 eJudged -->
+					<div id="hideWork44" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-44" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-44" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider44" class="slider slider04">
+								<li><img src="img/workEjudged01.png"><img src="img/workEjudged02.png"></li>
+								<li><img src="img/workEjudged03.png"><img src="img/workEjudged04.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>eJudged</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/ejudged/id635920856?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>An app that provides car show event managers with a time-saving practice that increases efficiency while decreasing overhead. This app (which calculates results in real-time) streamlines and smooths out the judging process, enhancing the success of show promoters, managers and entrants. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Ruby on Rails, Objective-C, Xcode AFnetworking, SQLite, Security Framework, MySQL, Workbench, Openshift, Libraries (Paperclip, CSV, Git).</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					<!-- Warren Charles (Head in Clouds) -->
+					<div id="work45" class="work">
+						<div class="imgSmall"><img src="img/workWarren.png"></div>
+						<div class="iconType iconType01"><ul>
+							<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>	<!-- Mobile Labs -->
+						</ul></div>
+						<div class="titleSmall titleSmall02"><h6>Warren Charles (Head in Clouds)</h6></div>
+ 					</div>					
+					<!-- Al Monitor -->
+					<div id="work46" class="work">
+						<div class="imgSmall"><img src="img/workAlMonitor.png"></div>
+						<div class="iconType iconType01">
+							<ul>	
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>	<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Al Monitor</h6></div>
+ 					</div>							
+					<!-- Auerbach -->
+					<div id="work47" class="work">
+						<div class="imgSmall"><img src="img/workAuerbach.png"></div>
+						<div class="iconType iconType02">
+							<ul>
+								<li class="iconTypeWeb"><img src="img/portf_iconWeb2.png"></li>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Web / Graphic Design  -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Auerbach</h6></div>
+ 					</div>					
+					<!-- JSCAPE -->
+					<div id="work48" class="work">
+						<div class="imgSmall"><img src="img/workJscape.png"></div>
+						<div class="iconType iconType01">
+							<ul>	
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>	<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>JSCAPE</h6></div>
+ 					</div>					
+					<!-- 45 Warren Charles (Head in Clouds) -->
+					<div id="hideWork45" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-45" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-45" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider45" class="slider">
+								<li><img src="img/workWarren01.png"><img src="img/workWarren02.png"></li>
+								<li><img src="img/workWarren03.png"><img src="img/workWarren04.png"></li>
+								<li><img src="img/workWarren05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Warren Charles</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/gb/app/warren-charles-head-in-clouds/id575270851?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>An interactive experience of Head in the Clouds, the album from Los Angeles based rock quartet Warren Charles. Through this app you can stream the entire album using the custom analog media player, find hidden objects in the first of its kind memory photo hunt game, search the album artwork to access exciting app features, watch exclusive content within the hand painted video player, browse behind the scenes photos from recording sessions, read fun facts about the band - among other features.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Stream audio from server, Tapjoy, StoreKit.framework, cocos2d, Flurry, Facebook iOS SDK, CoreImage Framework.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 46 Al Monitor : falta tech-->
+					<div id="hideWork46" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-46" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-46" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider46" class="slider">
+								<li><img src="img/workAlMonitor01.png"><img src="img/workAlMonitor02.png"></li>
+								<li><img src="img/workAlMonitor03.png"><img src="img/workAlMonitor04.png"></li>
+								<li><img src="img/workAlMonitor05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Al Monitor</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/es/app/al-monitor/id568523733?l=en&mt=8&ign-mpt=uo%3D2" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>An iPad application for reading news from the web portal Al-Monitor. No internet connection is needed to see the latest news visited! You can watch news videos, photos, stories, etc. We developed this app using Sencha and PhoneGap.</p></div>
+						
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 47 Auerbach -->
+					<div id="hideWork47" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-47" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-47" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider47" class="slider slider01">
+								<li><img src="img/workAuerbach01.png"></li>
+								<li><img src="img/workAuerbach02.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Auerbach</p></div>
+						<div class="LinkStore01"><a href="http://www.auerbachgroup.com/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						<div class="infoWork"><p>We developed a distributed and multi platform Trading System based on an algorithm provided by the client. The idea was to achieve an economic benefit in real-time financial markets through a completely automated process. The software is capable of receiving market data, filter it, and process the information using financial algorithms and it sends an order to the financial markets if there is an opportunity. 
+											<br>We built connections with different technologies that provide market data and used the Financial Information eXchange ("FIX") Protocol to send messages. We were also in charge of website development, giving access to Auerbach’s clients who chose to invest in their business. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Java, C#, MySQL, Swing, Javascript, HTML, PostgreSQL 9.1, JSP, CSS (Platforms: Solaris 10, Windows, Apache Tomcat 7.0.11)</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 48 JSCAPE -->
+					<div id="hideWork48" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						
+						<div class="gallery">
+							<ul id="slider48" class="slider slider03">
+								<li><img src="img/workJscape01.png"><img src="img/workJscape02.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>JSCAPE</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/mx/app/jscape-mft-server/id648518236?mt=8&ign-mpt=uo%3D2" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="LinkStore01"><a href="https://play.google.com/store/apps/details?id=com.jscape" target="_blank"><img src="img/iconGooglePlay.png"></a></div>
+						
+						<div class="infoWork"><p>This application helps users easily manage, view, transfer and share files. It is the mobile version of the existing <a href="http://www.jscape.com/products/file-transfer-servers/jscape-mft-server/" target="_blank">JSCAPE MFT Server</a>. The main features included are: uploading images and videos from camera and gallery, previewing common file formats (PDF, Word, Excel, PowerPoint, JPG, MP3, etc), sharing files with customers or co-workers, and organizing frequently accessed files using tag clouds - among others. </p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>iOS: XCode, Objetive-C, AFNetworking, QuickLook Framework, AddressBook Framework, Security Framework, SQLite. 
+								<br>Android: Eclipse, Android SDK, Java, ActionBarSherlock, aFileChooser, SQLite.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>	
+					<!-- Volomio -->
+					<div id="work49" class="work">
+						<div class="imgSmall"><img src="img/workVoloMio.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Graphic Design -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Volomio</h6></div>
+ 					</div>					
+					<!-- The Hub -->
+					<div id="work50" class="work">
+						<div class="imgSmall"><img src="img/workTheHub.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>The Hub</h6></div>
+ 					</div>					
+					<!-- PlayTheGrid -->
+					<div id="work51" class="work">
+						<div class="imgSmall"><img src="img/workPlayTheGrid.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Graphic Design -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>PlayTheGrid</h6></div>
+ 					</div>					
+					<!-- idScan GO -->
+					<div id="work52" class="work">
+						<div class="imgSmall"><img src="img/workIdScan.png"></div>
+						<div class="iconType iconType01">
+							<ul>	
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>	<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>idScan GO</h6></div>
+ 					</div>					
+					<!-- 49 Volomio : falta agregar info -->
+					<div id="hideWork49" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-49" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-49" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery">
+							<ul id="slider49" class="slider slider01">
+								<li><img src="img/workVoloMio01.png"></li>
+								<li><img src="img/workVoloMio02.png"></li>
+								<li><img src="img/workVoloMio03.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Volomio</p></div>
+						
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 50 The Hub -->
+					<div id="hideWork50" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						
+						<div class="gallery">
+							<ul id="slider50" class="slider slider01">
+								<li><img src="img/workTheHub01.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>The Hub</p></div>
+						<div class="LinkStore01"><a href="http://daily-hub.herokuapp.com/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						<div class="infoWork"><p>We developed two native applications, one for iPad (all versions) and one for Android Tablet “Samsung Galaxy tab”. Each app was basically a web browser to access The Hub’s website, using login credentials and interface as usual. 
+						<br><br>We worked on three main aspects: 1) we created two new CSS (iPad / Samsung Galaxy tab) to solve the visual issues that the website had while viewing it in a tablet, 2) we incorporated the capability of accessing the tablet's camera so the user could take or pick a photo/video to upload, and 3) we added the capability of scanning or entering a barcode to upload and be processed by the server.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>Xcode 4.5, Eclipse, Objective-C, Java + SDK Android, Github, ZBarSDK</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 51 PlayTheGrid : falta agregar info -->
+					<div id="hideWork51" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>						
+						<div class="gallery">
+							<ul id="slider51" class="slider slider01">
+								<li><img src="img/workPlayTheGrid01.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>PlayTheGrid</p></div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div> 
+					<!-- 52 idScan GO -->
+					<div id="hideWork52" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+								 <li id="slider-prev-52" class="btnleftPorf"><a href="#next"></a></li>
+								 <li id="slider-next-52" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery02">
+							<ul id="slider52" class="slider slider02">
+								<li><img src="img/workIdScan01.png"><img src="img/workIdScan02.png"></li>
+								<li><img src="img/workIdScan03.png"><img src="img/workIdScan04.png"></li>
+								<li><img src="img/workIdScan05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>idScan GO</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/idscan-go/id573630870?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>We worked with Card Scanning Solutions (CSSN) to develop idScan GO, an application that extracts and stores textual information, face image, and signature image from a driver's license to a portable device. The application uses Optical Character Recognition (OCR) technology, which converts data from scanned documents into computer-editable text that can be populated into other applications; and digital signal processing (DSP) algorithms which filter and clean tarnished images - this core technology differentiates the solution from other OCR applications.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>OCR (Optical Character Recognition) , DSP (digital signal processing)</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>
+					<!-- MedicScan GO -->
+					<div id="work53" class="work">
+						<div class="imgSmall"><img src="img/workMedicScan.png"></div>
+						<div class="iconType iconType01">
+						<ul>
+							<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>		<!-- Mobile Labs -->
+						</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>MedicScan GO</h6></div>
+ 					</div>
+					<!-- Live!y -->
+					<div id="work54" class="work">
+						<div class="imgSmall"><img src="img/workLively.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeLabs"><img src="img/portf_iconLabs2.png"></li>	<!-- Mobile Labs -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Live!y</h6></div>
+ 					</div>					
+					<!-- Titan -->
+					<div id="work55" class="work">
+						<div class="imgSmall"><img src="img/workTitan.png"></div>
+						<div class="iconType iconType01">
+							<ul>
+								<li class="iconTypeGD"><img src="img/portf_iconGD.png"></li>		<!-- Graphic Design -->
+							</ul>
+						</div>
+						<div class="titleSmall titleSmall01"><h6>Titan</h6></div>
+ 					</div>					
+					<!-- 53 MedicScan GO -->
+					<div id="hideWork53" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-53" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-53" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery02">
+							<ul id="slider53" class="slider slider02">
+								<li><img src="img/workMedicScan01.png"><img src="img/workMedicScan02.png"></li>
+								<li><img src="img/workMedicScan03.png"><img src="img/workMedicScan04.png"></li>
+								<li><img src="img/workMedicScan05.png"></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>MedicScan GO</p></div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/medicscan-go/id615038349?mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div class="infoWork"><p>We worked with Card Scanning Solutions (CSSN) to develop MedicScan GO, an application that extracts and stores textual information on a portable device from a medical insurance card image. The application uses Optical Character Recognition (OCR) technology, which converts data from scanned documents into computer-editable text that can be populated into other applications; and digital signal processing (DSP) algorithms which filter and clean tarnished images - this core technology differentiates the solution from other OCR applications.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>OCR (Optical Character Recognition) , DSP (digital signal processing)</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png"></div>
+					</div>					
+					<!-- 54 Live!y  -->
+					<div id="hideWork54" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"></a></div>
+						<div class="arrows">
+							<ul>
+							 <li id="slider-prev-54" class="btnleftPorf"><a href="#next"></a></li>
+							 <li id="slider-next-54" class="btnrightPorf"><a href="#next"></a></li>
+							</ul>
+						</div>
+						<div class="gallery gallery01">
+							<ul id="slider54" class="slider slider04">
+								<li><img src="img/workLively01.png"><img src="img/workLively02.png"/></li>
+								<li><img src="img/workLively03.png"><img src="img/workLively04.png"/></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Live!y</p></div>
+						<div class="infoWork"><p>Lively creates new avenues of connection through sharing the daily events of one’s life and healthy routine. It's an elegant device that uses passive motion sensors, placed on objects around the house, to track and stay mindful of healthy habits. Lively stays out of the way—no video cameras, nothing to wear—while sharing reminders and updates that let loved ones know your normal routine like going outside, eating meals, and taking medications.</p></div>
+						<div class="testimony">
+							<div class="titleTestimony"><a href="#"><img src="img/portf_icon_testimony.png"/><h5>Technologies</h5></a></div>
+							<div class="textTestimony"><p>SenTestingKit Framework, TestFlight SDK, Client/server, JSONKit.</p></div>
+						</div>
+						<div class="lineDown"><img src="img/lineDownClients.png" /></div>
+					</div>					
+					<!-- 55 Titan : falta agregar info -->
+					<div id="hideWork55" class="hideWork">
+						<div class="lineUp"><img src="img/linearrow.png"/></div>
+						<div class="closeCross"><a href="#"><img src="img/close.png"/></a></div>
+						
+						<div class="gallery">
+							<ul id="slider55" class="slider slider01">
+								<li><img src="img/workTitan01.png"/></li>
+							</ul>
+						</div>
+						<div class="titleBig"><p>Titan</p></div>						
+						<div class="lineDown"><img src="img/lineDownClients.png" /></div>
+					</div>					
+					<!-- solo para 640 -->
+					<div id="slides">
+						<div id="slidesWork01">
+							<div class="slidesTitle"><p>SUBWAY PLATTERS</p></div>
+							<div class="slidesImg"><img src="img/work01slides.png"></div>
+							<div class="slidesText"><p>The famous fast food organization with subsidiary in UK wanted a new “look & feel” to their website looking for concepts like professionalism, attractiveness and organization. The strategic planning was devoted to investigate the corporation identity elements and the values that make the brand. This way, we were able to articulate these concepts with the imprint of the brand, achieving a very satisfactory.</p></div>
+						</div>
+					</div>
+					<!-- fin -->
+				</div>		
+				</section>
+			</div>
+			
+					
+				
+			
+			<!-- 7mo triangulo -->
+			<div class="triangulo" style="background-color: #40B4A6;">
+				<img src="img/green03.png"/>
+			</div>
+			<!-- fin -->
+			
+			<!-- FOOTER -->
+			<footer id="footer">
+				<section id="SecFooter">              
+					<div id="footer_content">
+						<div id="facebook_twitter"><a class="otherLink" href="https://www.facebook.com/CodigoDelSur?fref=ts" target="_blank" id="footer_facebook"></a><a class="otherLink" href="https://twitter.com/codigodelsur" target="_blank" id="footer_twitter"></a></div>
+                 
+						<nav id="menu2">  
+							<ul>			
+								<li style="border:hidden;"><a href="#divPortfolio">Portfolio</a></li>
+								<li><a href="#divServices">Services</a></li>
+								<li><a href="#divClients">Clients</a></li>
+								<li><a href="#divAboutUs">About us</a></li>
+								<li><a href="#divContactUs">Contact us</a></li>
+							</ul>
+						</nav>
+							
+						<div id="uru">
+							<a href="#" id="cuti"></a>
+							<span style="float: left; text-align: left; margin-top:12px;">ASSOCIATED WITH THE URUGUAYAN <br> CHAMBER OF TECHNOLOGY</span>
+							<div style="clear: both;"></div>
+						</div>
+						<div id="direction">
+							<a href="#" id="uruguay"></a>
+							<span>Félix Olmedo 3532 | +598 2309 9008 | CP 11700 |  Montevideo | URUGUAY </span>
+                        </div>
+                        <span id="footer_line"></span>
+						<div><span>Copyright © 2013 CodigoDelSur</span></div>
+                    </div>
+					<div style="clear: both"></div>
+                </section>
+            </footer>
+			
+	</body>

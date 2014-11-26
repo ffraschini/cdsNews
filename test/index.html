@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<!--meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no" /-->
+
+		<title>Código del Sur</title>
+		<link rel="shortcut icon" href="Img/iconoBrowser.png">
+		<!-- To allow your media queries to take full effect a typical mobile-optimized site contains something like the following: -->
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		
+		<link rel="stylesheet" type="text/css" href="webCDS.css">		
+
+		<!-- Para SCROLL -->
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!--script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script-->
+		<script type="text/javascript" src="js/scrollTo.js"></script>
+		
+		<!-- Para SECCIONES -->
+		<script type="text/javascript" src="js/staff-effect.js"></script>
+		<script type="text/javascript" src="js/portfolio.js"></script>		
+		<script type="text/javascript" src="js/staff.js"></script>		
+		<script type="text/javascript" src="js/news.js"></script>
+		<script type="text/javascript" src="js/service.js"></script>
+		<script type="text/javascript" src="js/clients.js"></script>
+		<script type="text/javascript" src="js/about.js"></script>
+		<script type="text/javascript" src="js/spinnerFunction.js"></script>
+		<!--script type="text/javascript" src="js/main.js"></script-->
+		<script type="text/javascript" src="js/mail.js"></script>
+
+
+
+		<!-- jQuery library (served from Google) -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<!-- bxSlider Javascript file -->
+		<script src="jquery.bxslider/jquery.bxslider.min.js"></script>
+		<!-- bxSlider CSS file -->
+		<link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+
+
+		<!-- Para SLIDES -->
+		<script type="text/javascript" src="js/slides.js"></script>		<!-- about us-->
+		<script type="text/javascript" src="js/slides-portfolio.js"></script>
+		<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+		<script type="text/javascript" src="js/spin.js"></script>
+		<!--script type="text/javascript" src="js/spin.min.js"></script-->
+
+		<script type="text/javascript" src="js/jquery.spin.js"></script>
+
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">	
+		
+		<script type="text/javascript" src="js/pace.js"></script>
+  		<link href="css/BarberShop.css" rel="stylesheet" />
+
+
+
+			<!--jCarousel library
+		        <link rel="stylesheet" type="text/css" href="css/demo.css" />-->
+				<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+				<link rel="stylesheet" type="text/css" href="css/custom.css" />
+				<script src="js/modernizr.custom.17475.js"></script>
+			<!--Carousel Simple 02-->
+				<link rel="stylesheet" type="text/css" href="" />
+				<script>
+
+
+				 jQuery(document).ready(function(){				
+					iniciarPorfolio();
+					iniciarStaff();
+					iniciarServices();
+					iniciarClients();
+					iniciarNews();
+					iniciarAbout();
+					iniciarSpinner();							
+					
+				 });
+
+				/*jQuery(document).ready(function() {  
+				    jQuery(".zuperSlider").zuperSlider();
+				});*/
+							
+				</script>
+				<script type="text/javascript">
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script>
+				<script type="text/javascript">
+    
+				try {
+					var pageTracker = _gat._getTracker("UA-26554738-1");
+					pageTracker._trackPageview();
+				} catch(err) {}
+				</script>
+	</head>
+	
+	<body>
+		<header>
+			<!-- Barra de menu -->
+			<nav id="menu">  
+				<ul>
+					<li class="logo"><a href="#divInfo"></a></li>
+					<li class="secondline ceroli"><a id="first" href="#divPortfolio">Portfolio</a></li>
+					<li class="secondline firstli"><a href="#divServices">Services</a></li>
+					<li class="secondline fifthli"><a href="#divNews">News</a></li>
+					<li class="thirdline secondli"><a href="#divClients" style="min-width: 30px; width: 75%;">Clients</a></li>
+					<li class="thirdline thirdli"><a href="#divAboutUs" style="min-width: 45px;" >About us</a></li>
+					<li class="thirdline fourthli"><a href="#divContactUs" style="min-width: 80px;">Contact us</a></li>
+				</ul>
+			
+			</nav>
+			<!-- ¿ Link a tweeter y facebook ? -->
+			<nav id="iconos"> 
+				<ul>
+					
+					<li><a class="otherLink" href="https://twitter.com/codigodelsur" target="_blank"><img src="img/nav_tweeter.png"/></a></li>
+					<li><a class="otherLink" href="https://www.facebook.com/CodigoDelSur?fref=ts" target="_blank"><img src="img/nav_facebook.png"/></a></li>
+				</ul>
+			</nav>
+		</header>
+			
+			<!--div id="progressbar" style="z-index: 2000; position: fixed; width: 50%; margin-left: auto; margin-left: 25%; margin-top: 10%;"></div-->
+
+
+			<div id="divHome">
+            
+				<section id="divInfo">
+					<div id="slogan"><img src="img/home_text.png" /></div>
+					<div id="icono_talk"></div>
+					<div id="logo_large"><img src="img/logo_large.png" /></div>
+				<!--	<div id="animVideo"></div>	-->
+				</section>
+            	<div class="videoContainer">
+					<div id="video"><iframe  frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="http://player.vimeo.com/video/59991415?title=0&amp;amp;byline=0&amp;amp;portrait=0" id="vimeo1"></iframe></div>
+				</div>	
+			</div>
+			
+		<!-- PORTFOLIO -->
+			<div id="divPortfolio">
+				<section id="SecPortfolio">
+					<div id="titles"><h2 id="Portfolio">Portfolio /</h2><h3 class="subtitle">Our excellent work...</h3></div>
+					<div id="arrowsPort">
+						<ul>
+							<li class="btnleftPort"><a href="#"></a></li>
+							<li>titulo Porfolio</li>
+							<li class="btnrightPort"><a href="#"></a></li>
+						</ul>
+					</div>
+					<div id="btnPortfolio">
+						<ul>
+							<li class="btn-all" onclick="getWorkContainer('filter')"></li>
+							<li class="buttonPort btn-softw" onclick="getWorkContainer('filterSoftw')"></li>
+							<li class="buttonPort btn-labs" onclick="getWorkContainer('filterLabs')"></li>
+							<li class="buttonPort btn-webportfolio" onclick="getWorkContainer('filterWeb')"></li>
+							<li class="buttonPort btn-game" onclick="getWorkContainer('filterGame')"></li>
+							<li class="buttonPort btn-gd" onclick="getWorkContainer('filterGD')"></li>
+						</ul>
+					</div>						
+					<div id="arrowsPort450" class="content450" >						
+							<a onClick="GoBackPortfolioItem()" class="btnleftPort"></a>
+							<a class="btnrightPort" onClick="GoNextPortfolioItem()"></a>
+							<div>
+									<ul class="TitlePortfolio">
+										<li id="1">Peakour</li>
+										<li id="2">Holiday Crowd</li>
+										<li id="3">Subway</li>
+										<li id="4">Cortexa</li>
+										<li id="5">Scavenger Hunt</li>
+										<li id="6">Iisis</li>
+										<li id="7">miPlan</li>
+										<li id="8">Push it Poker</li>
+										<li id="9">Count the Animals!</li>
+										<li id="10">Avon</li>
+										<!--li id="11">Event Wizard</li-->
+										<li id="11">Guess Phrase</li>
+										<li id="12">Fodessa</li>
+										<li id="13">Bit Kaput</li>
+										<li id="14">Office Depot</li>
+										<li id="15">The Sullivan Group</li>
+										<li id="16">Next Generation Education</li>
+										<li id="17">LiquidAdventure</li>
+										<li id="18">Engle</li>
+										<li id="19">Dittoze</li>
+										<li id="20">Skout for iPhone</li>
+										<li id="21">Skout for iPad</li>
+										<li id="22">Seacoast</li>
+										<li id="23">Findstoragefast</li>
+										<li id="24">Fun Time Timer</li>
+										<li id="25">edMobility</li>
+										<li id="26">Siffter</li>
+										<li id="27">MiJay</li>
+										<li id="28">Hurricane Forecaster</li>
+										<li id="29">Pinpoint Parking</li>
+										<li id="30">Facility Engineer</li>
+										<li id="31">Anything Detector</li>
+										<li id="32">Pea Yourself</li>
+										<li id="33">MathSpace</li>
+										<li id="34">iGrade Soccer</li>
+										<li id="35">Onehub</li>
+										<li id="36">Kindara</li>
+										<li id="37">Social Coaster</li>
+										<li id="38">Storyly</li>
+										<li id="39">Waltja</li>
+										<li id="40">ScandLearn</li>
+										<li id="41">Center for Dermatology</li>
+										<li id="42">Medical Apps</li>
+										<li id="43">eJudged</li>
+										<li id="44">ScandLearn</li>
+										<li id="45">Al Monitor</li>
+										<li id="46">Auerbach</li>
+										<li id="47">JSCAPE</li>
+										<li id="48">Volomio</li>
+										<li id="49">The Hub</li>
+										<li id="50">PlayTheGrid</li>
+										<li id="51">idScan GO</li>
+										<li id="52">MedicScan GO</li>
+										<li id="53">Live!y</li>
+										<li id="54">Titan</li>
+									</ul>
+								</div>
+							
+						
+					</div>
+					
+					<div id="PortFolioDesc" class="contInfoDesc450">
+						<ul class="InfoPortfolio"> <!-- Portfolio para devices -->
+						<!--Peakour-->
+							<li id="cont1">
+								<img class="porfImg portFolioImg" src="img/Portfolio_ch/workPeakour01_ch.png"/>
+								<p>An interactive game we developed for Gotta Pea® that represents 
+								strategy on the streets. Using the techniques of Parkour, this game
+								makes you think and reason while having fun! </p>
+							</li>
+							<!-- Solo el primer elemento es cargado, los otros items son cargados por ajax con el slider -->
+						</ul>
+					</div>	
+					
+					
+					
+				<!-- Comienzan los Trabajos del porfolio para web -->					
+				<div class="workContainer">
+											
+					
+				</div>		
+				</section>
+			</div>
+			
+			<!-- 1er triangulo-->
+			<div class="triangulo">
+				<img src="img/red01.png"/>
+			</div>
+			<!-- Fin -->
+			
+		<!-- NEWS -->
+			<div id="divNews">
+				<section id="SecNews">
+					<div id="titles">
+						<h2 id="News">News /</h2>
+					</div>					
+					<!--ul id="carousel">
+						<li class="icon-news icon-news1" onclick="verNews01()"><img src="img/newsNova2013.png" /><h5>NOVA 2013 <br> People’s choice award</h5></li>
+						<li class="icon-news icon-news2" onclick="verNews02()"><img src="img/newsFunTimer.png" /><h5>Launch of <br> Fun Time Timer</h5></li>
+						<li class="icon-news icon-news3" onclick="verNews03()"><img src="img/newsHireDeveloper.png" /><h5>How to Hire the Right <br> Mobile App Developer</h5></li>
+						<li class="icon-news icon-news4" onclick="verNews04()"><img src="img/newsViajeIsrael.png" /><h5>Trip to Israel</h5><br/></li>						
+					</ul-->
+
+					<ul id="carousel">
+						<li class="icon-news icon-news1" onclick="verNews01()"><div style="background-image: url(img/newsNova2013.png);"></div><h5>NOVA 2013 <br> People’s choice award</h5></li>
+						<li class="icon-news icon-news2" onclick="verNews02()"><div style="background-image: url(img/newsFunTimer.png);"></div><h5>Launch of <br> Fun Time Timer</h5></li>
+						<li class="icon-news icon-news3" onclick="verNews03()"><div style=" background-image: url(img/newsHireDeveloper.png);"></div><h5>How to Hire the Right <br> Mobile App Developer</h5></li>
+						<li class="icon-news icon-news4" onclick="verNews04()"><div style=" background-image: url(img/newsViajeIsrael.png);"></div><h5>Trip to Israel</h5><br/></li>						
+					</ul>
+
+					<div id="newshide" class="mT25">     <!-- NOVA 2013 - ESTO VA OCULTO -->
+						<div id="firstlineNews"></div>
+						<div id="txtNews">
+							<div class="close" onclick="ocultarNews('newshide')"></div>
+						<p>As many of you know, last year we won the NOVA award in the exportation category. This Award seeks to recognize the innovation capacity of organizations and their contribution to improving the quality of life, as well as the economic progress of Uruguay.
+						<br><br>This year, we’re nominated for the Innovator people’s choice award (Premio al Innovador del público). In this category, people can choose and vote for the organization they feel is the most innovative of the all the different category winners from last year. 
+						<br><br>The Innovator people’s choice award will be announced during the 2013 ceremony that will take place in October. HOPE WE GET IT! 
+						</p>
+						</div>
+						<div id="secondlineNews"></div>
+					</div>
+					
+					<div id="newshide02" class="mT25">     <!-- Launch of Fun Time Timer - ESTO VA OCULTO -->
+						<div id="firstlineNews02"></div>
+						<div id="txtNews">
+							<div class="close" onclick="ocultarNews('newshide02')"></div>
+						<p>We are proud to announce the launch of Fun Time Timer, an app to help kids with PDD and Autism manage time in a better way. A special thank you to Laura Corvalán, autism specialist who came up with the idea for the project - we just helped make her dream come true! 
+						<br>We are really happy we were a part of this amazing project and we hope this app helps many children around the world! 
+						<br>If you wish to contact Laura Corvalán, you can find her on Twitter <a href="https://twitter.com/p0nja">@p0nja</a>
+						</p>
+						</div>
+						<div class="LinkStore01"><a href="https://itunes.apple.com/us/app/fun-time-timer/id652296774?l=es&ls=1&mt=8" target="_blank"><img src="img/iconAppStore.png"></a></div>
+						<div id="secondlineNews"></div>
+					</div>
+					
+					<div id="newshide03" class="mT25">     <!-- How to Hire the Right Mobile App Developer - ESTO VA OCULTO -->
+						<div id="firstlineNews03"></div>
+						<div id="txtNews">
+							<div class="close" onclick="ocultarNews('newshide03')"></div>
+						<p>Here is a great article (by Tim Parker) where he mentions what to look for to make sure you choose the right mobile developer. 
+						<br><br>There’s a list of seven things and we have them all! :-)</p>
+						<div class="LinkStore01"><a href="http://blog.intuit.com/employees/how-to-hire-the-right-mobile-app-developer/" target="_blank"><img src="img/iconLinkWeb.png"></a></div>
+						</div>
+						<div id="secondlineNews"></div>
+					</div>
+					
+					<div id="newshide04" class="mT25">     <!-- Trip to Israel - ESTO VA OCULTO -->
+						<div id="firstlineNews04"></div>
+						<div id="txtNews">
+							<div class="close" onclick="ocultarNews('newshide04')"></div>
+						<p>Our CEO, Nicolas Amarelle, will be traveling to Israel to participate in the business mission being organized by the Uruguayan Chamber of IT (Cuti). This mission will take place during the week of October 18 to 25, led by senior government officials and Cuti. 
+						<br><br>The trip's main objective is to strengthen the skills of the ICT industry in Uruguay, through the experiences and good practices implemented by Israel, one of the leaders in technological innovation, entrepreneurship and venture capital.
+						<br><br>The mission is scheduled to visit the most important technology companies (both Israeli and multinational), venture capital funds, incubators, technology companies, universities and government agencies to promote and develop.
+						<br><br>We hope Nicolas enjoys this trip and brings many visionary ideas! </p>
+						</div>
+						<div id="secondlineNews"></div>
+					</div>
+					
+					<!-- solo para 640 -->
+					
+					<div id="slides">
+						<div id="slidesNews">
+							<div class="slidesTitle"><p>News Fine Citizens</p></div>
+							<div class="slidesImg"><img src="img/news_480.png"></div>
+							<div class="slidesText">
+								<p>Everything we [Fine Citizens] do is connected and responsive, unless specified otherwise,” says Marketing Coordinator, Julianna White. “It would be irresponsible for us to do anything else. The fact is, the internet is not just on a desktop or laptop anymore. ” According to the International Telecommunications Union, roughly 25 billion devices will be able to connected to the internet by 2020 (ITU). This includes everything from the largest home appliances to the smallest consumer electronics along with smartphones, tablets, and PCs.
+									The use of RWD lets web designers have more control over the way a brand will look on a wide range of devices. “We cannot predict what device will be closest when our clients’ brands will be accessed. Our job is to make them look as great as possible no matter the size of the screen,” says White.
+									In conjunction with</p>
+							</div>
+						</div>
+					</div>
+					<!--max 450px-->
+					
+					<div class="content450" id="newsContent450" >						
+						<a onClick="GoBackNewsItem()" class="btnleftPort"></a>
+							<div>
+								<ul id="news_Tilte" class="TitlePortfolio">
+									<li id="n1">NOVA 2013 </li>
+									<li id="n2">Launch of Fun Time Timer </li>
+									<li id="n3">How to Hire the Right</li>
+									<li id="n4">Trip to Israel</li>
+								</ul>
+							</div>
+						<a class="btnrightPort" onClick="GoNextNewsItem()"></a>
+					</div>		
+					<div id="newsDesc" class="contInfoDesc450" >
+						<ul class="InfoNews">
+							<li id="News1">
+								<img class="porfImg" src="img/news/newsNova2013_460.png"/>
+								<p>As many of you know, last year we won the NOVA award in the exportation category. This Award seeks to recognize the innovation capacity of organizations and their contribution to improving the quality of life, as well as the economic progress of Uruguay.
+								<br><br>This year, we’re nominated for the Innovator people’s choice award (Premio al Innovador del público). In this category, people can choose and vote for the organization they feel is the most innovative of the all the different category winners from last year. 
+								<br><br>The Innovator people’s choice award will be announced during the 2013 ceremony that will take place in October. HOPE WE GET IT! 
+								</p>
+							</li>
+							<!-- para movile solo se carga la primera noticia, las otras se traen a demanda por ajax con el slider-->
+																			
+						</ul>
+					</div>
+				</section>
+			</div>
+			
+			<!-- 2er triangulo -->
+			<div class="triangulo">
+				<img src="img/blue01.png"/>
+			</div>
+			<!-- Fin -->
+			
+		<!-- SERVICES -->
+			<div id="divServices">
+				<section id="SecServices">
+				<div id="titles"><h2 id="Services">Services /</h2><h3 class="subtitle" >What we do best</h3></div>					
+					<div class="min-900">
+					
+					
+					<div id="iconServices">
+						<ul>
+							<li class="buttonServ icon-software" data-name="verServ1"></li>
+							<li class="buttonServ icon-mobile" data-name="verServ2"></li>
+							<li class="buttonServ icon-web" data-name="verServ3"></li>
+							<li class="buttonServ icon-game" data-name="verServ5" ></li>
+							<li class="buttonServ icon-graphic" data-name="verServ4" ></li>
+						</ul>
+					</div>
+					<div id="titleServices">
+						<ul>
+							<li><h5>Software development / Programming & Maintenance</h5></li>
+							<li><h5>Mobile development</h5></li>
+							<li><h5>Web development</h5></li>
+							<li><h5>Games</h5></li>
+							<li><h5>Graphic design</h5></li>
+						</ul>
+					</div>
+					<div style="clear: both;"></div>
+					<div id="serviceshide">        <!-- Software development / Programming & Maintenance -->
+						<div id="firstlineServ"></div>
+						<div id="txtServices">
+							<div class="close" onclick="ocultarServ('serviceshide')"></div>
+						<p> Due to the nature of our business, we’ve had the chance to work on a wide range of technologies and in various industries. Because of this, we have extensive experience in medical software, stock investment, game industry, education, and many other fields, becoming better professionals each day.</p>
+						<p> When it comes down to developing any kind of Software, we take each stage very seriously: </p>
+						<p> <img src="img/tick.png"/> Problem Analysis 
+							 <br> <img src="img/tick.png"/> Market research
+							 <br> <img src="img/tick.png"/> Gather requirements for the proposed business solution
+							 <br> <img src="img/tick.png"/> Establish a plan or design for the software-based solution
+							 <br> <img src="img/tick.png"/> Implement (coding) the software
+							 <br> <img src="img/tick.png"/> Test the software
+							 <br> <img src="img/tick.png"/> Deployment
+							 <br> <img src="img/tick.png"/> Maintenance and bug fixing
+						</p>
+						</div>
+						<div id="secondlineServ"></div>
+					</div>
+					
+					<div id="serviceshide2">        <!-- Mobile development -->
+						<div id="firstlineServ3"></div>
+						<div id="txtServices">
+							<div class="close" onclick="ocultarServ('serviceshide2')"></div>
+						<p> We have been developing mobile applications since 2007, and have more than 30 applications under our belt that are available at the different Application Stores (App Store and Google Play).</p>
+						<p> We have a dedicated team of over 20 mobile developers that just breathe mobile technologies and have developed medical, financial, and social networking applications, plus many games and animations - to name a few.</p>
+						<p> Our core mobile skills are focused on iOS, Android, Cordova (PhoneGap) and HTML5. </p>
+						
+						</div>
+						<div id="secondlineServ"></div>
+					</div>
+					
+					<div id="serviceshide3">        <!-- Web development -->
+						<div id="firstlineServ2"></div>
+						<div id="txtServices">
+							<div class="close" onclick="ocultarServ('serviceshide3')"></div>
+							<p> We can create your website from scratch and take care of everything - from graphic design to programming and QA. Our experience goes from Client side coding to Server side coding, including development of a CMS (Content Management Systems) which gives you independence from us when updating content.</p>
+						<p> We use major web development programming languages like J2EE, .NET, PHP, Flex, RoR and frameworks like Joomla and Wordpress.</p>
+						
+						
+						
+						</div>
+						<div id="secondlineServ"></div>
+					</div>
+					
+					<div id="serviceshide5">        <!-- Games -->
+						<div id="firstlineServ5"></div>
+						<div id="txtServices">
+							<div class="close" onclick="ocultarServ('serviceshide5')"></div>
+						<p> This is what we love to do the most! We have worked with many games in many platforms, including web games, desktop and mobile. </p>
+						<p> We cover these game development phases:	</p>
+						<p> <img src="img/tick.png"/> Graphics
+							<br> <img src="img/tick.png"/> Physics
+							<br> <img src="img/tick.png"/> Scripting
+							<br> <img src="img/tick.png"/> Sound
+							<br> <img src="img/tick.png"/> Gameplay
+							<br> <img src="img/tick.png"/> UI
+							<br> <img src="img/tick.png"/> Input processing
+							<br> <img src="img/tick.png"/> Game tools
+							<br> <img src="img/tick.png"/> Network communications
+						</p>
+						</div>
+						<div id="secondlineServ"></div>
+					</div>
+					
+					<div id="serviceshide4">        <!-- Graphic design -->
+						<div id="firstlineServ4"></div>
+						<div id="txtServices">
+							<div class="close" onclick="ocultarServ('serviceshide4')"></div>
+						<p>	As creative minds in a digital world, we certainly know the importance of things looking awesome, and the direct impact it has on the success (or not) of a good idea. </p>
+						<p> Our graphic design team will provide a creative and aesthetic way to make your ideas come true, by combining typography, visual arts and page layout and creating a balanced, focused and symmetrical result. </p>
+						</div>
+						<div id="secondlineServ"></div>
+					</div>
+					
+					<div id="titleMethod"><h2 id="Method">Methodology /</h2><h3 class="subtitle">Agile software development</h3></div>
+					<div id="scrum"></div>
+					<div id="scrumLogo"><a href="http://www.scrum.org/" target="_blank"><img src="img/scrumLogo.png"></a></div>
+					</div>
+					<div class="max-900">
+						<div id="iconServices">
+							<ul>
+								<li class="buttonServ ">
+									<div class="titleS"> 
+										<span  onclick="viewService('softwareText')">
+										<img class="iconService" src="img/iconsoftware600.png"/> Software development </span>
+									</div>
+									<div class="softwareText contS" style="display:none">
+									<img class="arrowgreen" src="img/arrowgreen.png" />
+										<p> Due to the nature of our business, we’ve had the chance to work on a wide range of technologies and in various industries. Because of this, we have extensive experience in medical software, stock investment, game industry, education, and many other fields, becoming better professionals each day.</p>
+										<p> When it comes down to developing any kind of Software, we take each stage very seriously: </p>
+										<p> <img src="img/tick.png"/> Problem Analysis 
+										 <br><img src="img/tick.png"/> Market research
+										 <br> <img src="img/tick.png"/> Gather requirements for the proposed business solution
+										 <br> <img src="img/tick.png"/> Establish a plan or design for the software-based solution
+										 <br> <img src="img/tick.png"/> Implement (coding) the software - THE BEST PART! :D
+										 <br> <img src="img/tick.png"/> Test the software
+										 <br> <img src="img/tick.png"/> Deployment
+										 <br> <img src="img/tick.png"/> Maintenance and bug fixing
+										</p>
+									</div>
+								</li>
+								<li class="buttonServ ">
+									<div class="titleS"> 
+										<span onclick="viewService('mobileText')"><img class="iconService" src="img/iconmobile600.png"/>Mobile development</span>
+									</div>
+									<div class="mobileText contS" style="display:none">
+										<img class="arrowgreen" src="img/arrowgreen.png" />
+										<p> We have been developing mobile applications since 2007, and have more than 30 applications under our belt that are available at the different Application Stores (App Store and Google Play).</p>
+										<p> We have a dedicated team of over 20 mobile developers that just breathe mobile technologies and have developed medical, financial, and social networking applications, plus many games and animations - to name a few.</p>
+										<p> Our core mobile skills are focused on iOS, Android, Cordova (PhoneGap) and HTML5. </p>
+									</div>
+								</li>
+								<li class="buttonServ ">
+									<div class="titleS"> 
+										<span onclick="viewService('webText')"><img class="iconService" src="img/iconwork600.png" />Web development</span>
+									</div>
+									<div class="webText contS" style="display:none">
+										<img class="arrowgreen" src="img/arrowgreen.png" />
+										<p> We can create your website from scratch and take care of everything - from graphic design to programming and QA. Our experience goes from Client side coding to Server side coding, including development of a CMS (Content Management Systems) which gives you independence from us when updating content.</p>
+										<p> We use major web development programming languages like J2EE, .NET, PHP, Flex, RoR and frameworks like Joomla and Wordpress.</p>
+							
+									</div>
+								</li>
+								<li class="buttonServ">
+									<div class="titleS"> 
+										<span onclick="viewService('gameText')"><img class="iconService" src="img/icongame600.png" />Games</span>
+									</div>
+									<div class="gameText contS" style="display:none">
+									<img class="arrowgreen" src="img/arrowgreen.png" />
+									<p> This is what we love to do the most! We have worked with many games in many platforms, including web games, desktop and mobile. </p>
+									<p> We cover these game development phases:	</p>
+									<p> <img src="img/tick.png"/> Graphics
+										<br> <img src="img/tick.png"/> Physics
+										<br> <img src="img/tick.png"/> Scripting
+										<br> <img src="img/tick.png"/> Sound
+										<br> <img src="img/tick.png"/> Gameplay
+										<br> <img src="img/tick.png"/> UI
+										<br> <img src="img/tick.png"/> Input processing
+										<br> <img src="img/tick.png"/> Game tools
+										<br> <img src="img/tick.png"/> Network communications
+									</p>
+									</div>
+								</li>
+								<li class="buttonServ">
+									<div class="titleS"> 
+									<span onclick="viewService('graphicText')"><img class="iconService" src="img/icongraphic600.png"/>Graphic design</span>
+									</div>
+									<div class="graphicText contS" style="display:none">
+										<img class="arrowgreen" src="img/arrowgreen.png" />
+										<p>	As creative minds in a digital world, we certainly know the importance of things looking awesome, and the direct impact it has on the success (or not) of a good idea. </p>
+										<p> Our graphic design team will provide a creative and aesthetic way to make your ideas come true, by combining typography, visual arts and page layout and creating a balanced, focused and symmetrical result. </p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<!-- 3er triangulo -->
+			<div class="triangulo">
+				<img src="img/green01.png"/>
+			</div>
+			<!-- Fin -->
+			
+		<!-- CLIENTS -->
+			<div id="divClients">
+				<section id="SecClients">
+					<div id="titles"><h2 id="Clients">Clients /</h2><h3 class="subtitle" >What they think of us...</h3></div>
+					<div id="arrowsClients">
+						<ul>
+							<li class="btnleftClients"><a href="#"></a></li>
+							<li class="btnrightClients"><a href="#"></a></li>
+						</ul>
+					</div>
+					
+				<!-- lista clientes -->
+					
+					<!-- linea 1 -->
+					
+					
+				<div class="min-900">	
+				
+				
+					<!-- dropprops -->
+					<div id="client01" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsDropprops.png);"></div>
+						</div>					
+						<!--div id="imgClient01" class="imgClient"><img src="img/clientsImg.png"></div-->
+						<div id="nameClient01" class="nameClient"><h5>Dropprops</h5><br /></div>
+						<div id="iconClient01" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					
+					</div>
+					
+					<!-- Scrum IT -->
+					
+					<div id="client02" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsScrumIT.png);"></div>
+						</div>
+						<!--div id="imgClient02" class="imgClient"><img src="img/clientsScrumIT.png"></div-->
+						<div id="nameClient02" class="nameClient"><h5>Scrum IT</h5><br /></div>
+						<div id="iconClient02" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Rokk3rLabs -->
+					
+					<div id="client03" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsRokk3.png);"></div>
+						</div>
+						<!--div id="imgClient03" class="imgClient"><img src="img/clientsRokk3.png"></div-->
+						<div id="nameClient03" class="nameClient"><h5>Rokk3rLabs</h5><br /></div>
+						<div id="iconClient03" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- DreamScape Multimedia -->
+					
+					<div id="client04" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 140px; height: 140px; background-image: url(img/clientsDream.png);"></div>
+						</div>
+						<!--div id="imgClient04" class="imgClient"><img src="img/clientsDream.png"></div-->
+						<div id="nameClient04" class="nameClient"><h5>DreamScape Multimedia</h5></div>
+						<div id="iconClient04" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- 01 dropprops -->
+					
+					<div id="hideClient01" class="hideClient">
+						<div id="lineUpClient01" class="lineUpClient"></div>
+						<div id="closeClient01" class="closeClient" ></div>
+						<div id="infoClient01" class="infoClient">
+							<p>“As many of you know, choosing an outsourcing partner is a difficult process and in many cases, does not end well. My experience with Codigodelsur has been amazing. I had previously tried to work with another company found on eLance to take a Sencha touch web app and add Phone Gap functionality like FB login, camera integration, etc. They failed miserably and cost us a lot of time in the process. Everyone at Codigodelsur is professional, on time, on budget and they are easy to communicate with via Skype. I cannot give a higher recommendation for your iOS development. ~ Kevin Growney”</p>
+						</div>
+						<div id="lineDownClient01" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 02 Scrum IT -->
+					
+					<div id="hideClient02" class="hideClient">
+						<div id="lineUpClient02" class="lineUpClient"></div>
+						<div id="closeClient02" class="closeClient"></div>
+						<div id="infoClient02" class="infoClient">
+							<p>“Team was excellent, communicated well with good tools. The development progressed smoothly, with a continuously changing backlog that allowed us to respond to our customers.”
+							<br><br>“This has been a complex project development that is a foundation of other project and Codigo Del Sur are the team that did that and will do the other work.”</p>
+						</div>
+						<div id="lineDownClient02" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 03 Rokk3rLabs -->
+					
+					<div id="hideClient03" class="hideClient">
+						<div id="lineUpClient03" class="lineUpClient"></div>
+						<div id="closeClient03" class="closeClient"></div>
+						<div id="infoClient03" class="infoClient"><p>“Very professional team!”</p></div>
+						<div id="lineDownClient03" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 04 DreamScape Multimedia -->
+					
+					<div id="hideClient04" class="hideClient">
+						<div id="lineUpClient04" class="lineUpClient"></div>
+						<div id="closeClient04" class="closeClient"></div>
+						<div id="infoClient04" class="infoClient">
+							<p>“CodigoDelSur has put up with us for a while now. More often than not, they do solid work. I'm comfortable giving them a 5-star rating. Recommended.”
+							<br><br>“We continue to receive solid work from CodigoDelSur. Thank you!”
+							<br><br>“The team at CodigoDelSur do great work. Highly recommended”
+							<br><br>“The customer has been pleased! Good work!”
+							<br><br>“Brilliant work. Thank you.”</p>
+						</div>
+						<div id="lineDownClient04" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- linea 2 -->
+					
+					<!-- Storyly -->
+					
+					<div id="client05" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 140px; height: 140px; background-image: url(img/clientsStoryly.png);"></div>
+						</div>
+						<!--div id="imgClient05" class="imgClient"><img src="img/clientsStoryly.png"></div-->
+						<div id="nameClient05" class="nameClient"><h5>Storyly</h5><br /></div>
+						<div id="iconClient05" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Webátix -->
+					
+					<div id="client06" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsWebatix.png);"></div>
+						</div>
+						<!--div id="imgClient06" class="imgClient"><img src="img/clientsImg.png"></div-->
+						<div id="nameClient06" class="nameClient"><h5>Webátix</h5><br /></div>
+						<div id="iconClient06" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- BiznessApps -->
+					
+					<div id="client07" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsBiznessApps.png);"></div>
+						</div>
+						<!--div id="imgClient07" class="imgClient"><img src="img/clientsBiznessApps.png"></div-->
+						<div id="nameClient07" class="nameClient"><h5>BiznessApps</h5><br /></div>
+						<div id="iconClient07" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Appracadabra -->
+					
+					<div id="client08" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsAppracadabra.png);"></div>
+						</div>
+						<!--div id="imgClient08" class="imgClient"><img src="img/clientsAppracadabra.png"></div-->
+						<div id="nameClient08" class="nameClient"><h5>Appracadabra</h5><br /></div>
+						<div id="iconClient08" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- 05 Storyly -->
+					
+					<div id="hideClient05" class="hideClient">
+						<div id="lineUpClient05" class="lineUpClient"></div>
+						<div id="closeClient05" class="closeClient"></div>
+						<div id="infoClient05" class="infoClient"><p>“This was a small test job - but I was impressed with the results and the effective communication.”</p></div>
+						<div id="lineDownClient05" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 06 Webátix -->
+					
+					<div id="hideClient06" class="hideClient">
+						<div id="lineUpClient06" class="lineUpClient"></div>
+						<div id="closeClient06" class="closeClient"></div>
+						<div id="infoClient06" class="infoClient">
+							<p>“Project was ended before completion, but these guys stood behind their work and were very fair in working through some issues we had in the beginning. I'd recommend them for your next .net program.”</p>
+						</div>
+						<div id="lineDownClient06" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 07 BiznessApps -->
+					
+					<div id="hideClient07" class="hideClient">
+						<div id="lineUpClient07" class="lineUpClient"></div>
+						<div id="closeClient07" class="closeClient"></div>
+						<div id="infoClient07" class="infoClient"><p>“They did a great job working for our company. Their work was on time and according to our deadline. I would definitely recommend to any company. Thanks!”</p></div>
+						<div id="lineDownClient07" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 08 Appracadabra -->
+					
+					<div id="hideClient08" class="hideClient">
+						<div id="lineUpClient08" class="lineUpClient"></div>
+						<div id="closeClient08" class="closeClient"></div>
+						<div id="infoClient08" class="infoClient"><p>“Our experience with this provider is great, we are very happy to have worked with them. They are professional, great and clear communicators and they deliver what they promise. We will certainly work with them for future projects.”</p></div>
+						<div id="lineDownClient08" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- linea 3 -->
+					
+					<!-- Leapgo -->
+					
+					<div id="client09" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsLeapGo.png);"></div>
+						</div>
+						<!--div id="imgClient09" class="imgClient"><img src="img/clientsLeapGo.png"></div-->
+						<div id="nameClient09" class="nameClient"><h5>Leapgo</h5><br /></div>
+						<div id="iconClient09" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Zoom International -->
+					
+					<div id="client10" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsZoom.png);"></div>
+						</div>
+						<!--div id="imgClient10" class="imgClient"><img src="img/clientsZoom.png"></div-->
+						<div id="nameClient10" class="nameClient"><h5>Zoom International</h5><br /></div>
+						<div id="iconClient10" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- StrongerLabs -->
+					
+					<div id="client11" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsStrongerLabs.png);"></div>
+						</div>
+						<!--div id="imgClient11" class="imgClient"><img src="img/clientsStrongerLabs.png"></div-->
+						<div id="nameClient11" class="nameClient"><h5>StrongerLabs</h5><br /></div>
+						<div id="iconClient11" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient2"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- BHA Financial Solutions -->
+					
+					<div id="client12" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 140px; height: 140px; background-image: url(img/clientsBHA.png);"></div>
+						</div>
+						<!--div id="imgClient12" class="imgClient"><img src="img/clientsBHA.png"></div-->
+						<div id="nameClient12" class="nameClient"><h5>BHA Financial Solutions</h5></div>
+						<div id="iconClient12" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient2"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- 09 Leapgo -->
+					
+					<div id="hideClient09" class="hideClient">
+						<div id="lineUpClient09" class="lineUpClient"></div>
+						<div id="closeClient09" class="closeClient"></div>
+						<div id="infoClient09" class="infoClient"><p>“CodigoDelSur is a great, young company with tons of talent. If you can afford to work with them you will not be disappointed.”</p></div>
+						<div id="lineDownClient09" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 10 Zoom International -->
+					
+					<div id="hideClient10" class="hideClient">
+						<div id="lineUpClient10" class="lineUpClient"></div>
+						<div id="closeClient10" class="closeClient"></div>
+						<div id="infoClient10" class="infoClient"><p>“Great job, thank you :)”</p></div>
+						<div id="lineDownClient10" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 11 StrongerLabs -->
+					
+					<div id="hideClient11" class="hideClient">
+						<div id="lineUpClient11" class="lineUpClient"></div>
+						<div id="closeClient11" class="closeClient"></div>
+						<div id="infoClient11" class="infoClient"><p>“CodigoDelSur was able to complete the assignment and provided valuable feedback.”</p></div>
+						<div id="lineDownClient11" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 12 BHA Financial Solutions -->
+					
+					<div id="hideClient12" class="hideClient">
+						<div id="lineUpClient12" class="lineUpClient"></div>
+						<div id="closeClient12" class="closeClient"></div>
+						<div id="infoClient12" class="infoClient">
+							<p>“The team at Codigo del Sur did a great job on this project and I'll definitely hire them again.”
+							<br><br>“The standard of their work was excellent, they communicate frequently and were very reasonable on the odd occasion we had to resolve some ambiguity.”</p>
+						</div>
+						<div id="lineDownClient12" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- linea 4 -->
+					
+					<!-- Cortexa -->
+					
+					<div id="client13" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsCortexa.png);"></div>
+						</div>
+						<!--div id="imgClient13" class="imgClient"><img src="img/clientsCortexa.png"></div-->
+						<div id="nameClient13" class="nameClient"><h5>Cortexa</h5><br /></div>
+						<div id="iconClient13" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- IonGrid Inc. -->
+					
+					<div id="client14" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsIongrid.png);"></div>
+						</div>
+						<!--div id="imgClient14" class="imgClient"><img src="img/clientsIongrid.png"></div-->
+						<div id="nameClient14" class="nameClient"><h5>IonGrid Inc.</h5><br /></div>
+						<div id="iconClient14" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Guru Ticketing -->
+					
+					<!--div id="client15" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsGuru.png);"></div>
+						</div>
+						<div id="nameClient15" class="nameClient"><h5>Guru Ticketing</h5><br /></div>
+						<div id="iconClient15" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div-->
+					
+					<!-- jGraph -->
+					
+					<div id="client16" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsJgraph.png);"></div>
+						</div>
+						<!--div id="imgClient16" class="imgClient"><img src="img/clientsJgraph.png"></div-->
+						<div id="nameClient16" class="nameClient"><h5>jGraph</h5><br /></div>
+						<div id="iconClient16" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Auerbach Group -->
+					
+					<div id="client17" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 140px; height: 140px; background-image: url(img/clientsAuerbach.png);"></div>
+						</div>
+						<!--div id="imgClient17" class="imgClient"><img src="img/clientsAuerbach.png"></div-->
+						<div id="nameClient17" class="nameClient"><h5>Auerbach Group</h5><br /></div>
+						<div id="iconClient17" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- 13 Cortexa -->
+					
+					<div id="hideClient13" class="hideClient">
+						<div id="lineUpClient13" class="lineUpClient"></div>
+						<div id="closeClient13" class="closeClient"></div>
+						<div id="infoClient13" class="infoClient">
+							<p>“The CodigodelSur team have been exceptionally valuable team members, and a true pleasure to work with. They jumped head first into a very unusual software architecture, master many new skills and techniques quickly, and demonstrated enthusiasm, ingenuity, quality, and sensibility throughout the project. Their work ethic is solid and consistent. And, their English language skills really are excellent.”
+							<br><br>“I will absolutely use CodigodelSur in future projects. As soon as possible!”</p>
+						</div>
+						<div id="lineDownClient13" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 14 IonGrid Inc. -->
+					
+					<div id="hideClient14" class="hideClient">
+						<div id="lineUpClient14" class="lineUpClient"></div>
+						<div id="closeClient14" class="closeClient"></div>
+						<div id="infoClient14" class="infoClient">
+							<p>“We were happy with the work they did. It became very difficult to keep their team and our team from tripping over each other in the code, but they did implement the changes we requested and did a really good job. I would recommend this team especially if you need a whole app developed, including perhaps some of the visual design work, etc. We asked them to add some functionality to an existing app, while we were working in other parts of the code, and that is much more challenging (probably true with any outside dev team).”</p></div>
+						<div id="lineDownClient14" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 15 Guru Ticketing -->
+					
+					<!--div id="hideClient15" class="hideClient">
+						<div id="lineUpClient15" class="lineUpClient"></div>
+						<div id="closeClient15" class="closeClient"></div>
+						<div id="infoClient15" class="infoClient">
+							<p>“Great experience all around. Talented team with great technical skills, as well as outstanding communication. Accurate with deadlines and estimates, and quality of work was fantastic.”
+							<br><br>“Fantastic provider. Worked quickly and efficiently, while producing high-quality results. Frequently updated us on their progress and beat deadlines.”
+							<br><br>“We will be working with them again soon.”</p>
+						</div>
+						<div id="lineDownClient15" class="lineDownClinet"></div>
+					</div-->
+					
+					<!-- 16 jGraph -->
+					
+					<div id="hideClient16" class="hideClient">
+						<div id="lineUpClient15" class="lineUpClient"></div>
+						<div id="closeClient16" class="closeClient"></div>
+						<div id="infoClient16" class="infoClient">
+							<p>“Codigo pulled out all the stops to get me a resource and turn the project around as quickly as possible. Top marks, as always.”
+							<br><br>“Yet again, Codigodelsur have provided a far more professional contracting service than any other contractor we've found on ODesk. Great communication, but in this case it was hardly needed. They were given a high level task and the update emails were just that. They proceeded with the job without taking up any of our time and delivered the task correctly in good time. Would always recommend.”
+							<br><br>“CodigoDelSur provided excellent quality, communications and project management as always...” 
+							<br><br>“The quality of the work and communication was first-class. I would strongly recommend this provider and intend to use them again. The task was very detailed and they undertook it in a very professional way with the minimum of supervision.”</p>
+						</div>
+						<div id="lineDownClient16" class="lineDownClinet"></div>
+					</div>
+
+					<!-- 17 Auerbach Group -->
+					
+					<div id="hideClient17" class="hideClient">
+						<div id="lineUpClient16" class="lineUpClient"></div>
+						<div id="closeClient17" class="closeClient"></div>
+						<div id="infoClient17" class="infoClient">
+							<p>“The CodigodelSur team have been exceptionally valuable team members, and a true pleasure to work with. They jumped head first into a very unusual software architecture, master many new skills and techniques quickly, and demonstrated enthusiasm, ingenuity, quality, and sensibility throughout the project. Their work ethic is solid and consistent. And, their English language skills really are excellent.”
+							<br><br>“I will absolutely use CodigodelSur in future projects. As soon as possible!”</p>
+						</div>
+						<div id="lineDownClient17" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- linea 5 -->
+					
+					
+					<!-- Paradigm Web Architects -->
+					
+					<div id="client18" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsParadigm.png);"></div>
+						</div>
+						<!--div id="imgClient18" class="imgClient"><img src="img/clientsParadigm.png"></div-->
+						<div id="nameClient18" class="nameClient"><h5>Paradigm Web Architects</h5></div>
+						<div id="iconClient18" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Blaychon -->
+					
+					<div id="client19" class="client">
+						<div id="imgClient01" class="imgClient">
+							<div style="width: 136px; height: 135px; background-image: url(img/clientsBlaychon.png);"></div>
+						</div>
+						<!--div id="imgClient19" class="imgClient"><img src="img/clientsImg.png"></div-->
+						<div id="nameClient19" class="nameClient"><h5>Blaychon</h5><br /></div>
+						<div id="iconClient19" class="iconClient">
+							<ul>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+								<li class ="i_starsClient"></li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					
+					<!-- 18 Paradigm Web Architects -->
+					
+					<div id="hideClient18" class="hideClient">
+						<div id="lineUpClient17" class="lineUpClient"></div>
+						<div id="closeClient18" class="closeClient"></div>
+						<div id="infoClient18" class="infoClient">
+							<p>“This was an incredibly challenging project and they were the fourth resource we had engaged. They were also the first to actually complete the work. There were some communication challenges as far as us having to remove idioms from our project documents other than that their English was quite excellent. All points of contact on their end were very easy to work with. 
+							<br>We will be engaging them again in the future.”</p></div>
+						<div id="lineDownClient18" class="lineDownClinet"></div>
+					</div>
+					
+					<!-- 19 Blaychon -->
+					
+					<div id="hideClient19" class="hideClient">
+						<div id="lineUpClient18" class="lineUpClient"></div>
+						<div id="closeClient19" class="closeClient"></div>
+						<div id="infoClient19" class="infoClient">
+							<p>“CodigoDelSur has been great to work with. Very pleased with their skills and the quality of their work. We would definitely work with them again in the future.”</p>
+						</div>
+						<div id="lineDownClient19" class="lineDownClinet"></div>
+					</div>
+					
+				</div>	
+				<div class="max-900">
+					<div id="client450" class="content450" >
+						
+							<a onClick="GoBackClientItem()" class="btnleftPort"></a>
+							<a class="btnrightPort" onClick="GoNextClientItem()"></a>
+							<div>
+									<ul class="TitlePortfolio" id="clientItems">
+										<li id="c1">Dropprops</li>
+										<li id="c2">Scrum IT</li>
+										<li id="c3">Rokk3rLabs</li>
+										<li id="c4">DreamScape</li>										
+										<li id="c5">Storyly</li>
+										<li id="c6">Webátix</li>
+										<li id="c7">BiznessApps</li>
+										<li id="c8">Appracadabra</li>										
+										<li id="c9">Leapgo</li>
+										<li id="c10">Zoom International</li>
+										<li id="c11">StrongerLabs</li>
+										<li id="c12">BHA Financial Solutions</li>										
+										<li id="c13">Cortexa</li>
+										<li id="c14">IonGrid Inc.</li>
+										<!--li id="c15">Guru Ticketing</li-->
+										<li id="c15">jGraph</li>										
+										<li id="c16">Auerbach Group</li>
+										<li id="c17">Paradigm Web Architects</li>
+										<li id="c18">Blaychon</li>
+									</ul>
+								</div>
+							
+						
+					</div>
+					
+					<div id="ClientDesc" onriz  class="contInfoDesc450">
+						<ul id="infoClientDesc" class="InfoPortfolio">
+						<!---->
+							<li id="cli_cont1">
+								<img class="porfImg" src="Img/clientsDropprops.png"/>
+								<p>“As many of you know, choosing an outsourcing partner is a difficult process and in many cases, 
+								does not end well. My experience with Codigodelsur has been amazing. I had previously tried to 
+								work with another company found on eLance to take a Sencha touch web app and add Phone Gap functionality
+								like FB login, camera integration, etc. They failed miserably and cost us a lot of time in the
+								process. Everyone at Codigodelsur is professional, on time, on budget and they are easy to 
+								communicate with via Skype. I cannot give a higher recommendation for your iOS development.
+								~ Kevin Growney”</p>
+							</li>
+							<!-- para movile solo se carga el primer cliente, los otros se traen a demanda por ajax con el slider-->
+						</ul>
+					</div>	
+				
+				
+				
+				</div>
+				
+					
+				</section>
+			</div>
+			
+			<!-- 4to triangulo -->
+			<div class="triangulo">
+				<img src="img/green02.png"/>
+			</div>
+			<!-- Fin -->
+			
+		<!-- ABOUT US -->
+			
+			<div id="divAboutUs">
+				<section id="SecAboutUs">
+					<div id="titles"><h2 id="AboutUs">About us /</h2><h3 class="subtitle" >What is CDS?</h3></div>
+					<p> Since 2007 (THE beginning) we have been growing exponentially, incorporating the best and most creative members of our community. 
+
+						<br><br>Today, we are over 40 members including programmers, designers, engineers, mobile developers, and executives. We have worked <h8>+40.000 hours</h8> in the past four years. 
+						<br><br>We consider our team to be our main asset, aiming to have the most professionally-fun environment. Our team is composed of highly skilled developers (yes, you can call us <h8>geeks</h8>) eager to get into the <h8>latest technologies</h8> and use them to leverage the products we make for our customers. Our team also includes <h8>designers</h8> who make our freaking advanced engineering machine products look like a <h8>piece of art</h8>.
+						<br><br>We work in a <h8>professional</h8> and <h8>planned</h8> way within a fun and motivating environment,  knowing that <h8>communication</h8> and <h8>quality</h8> are crucial when working offshore. Meeting deadlines is the difference between success and failure - no matter how good your final product is.
+						<br><br>This is who we are, this is what you can expect from us, and it is what we eagerly want to show you! 
+					</p>
+					<div class="min-900">	
+						<div id="camera">
+							<h5>Photos</h5>
+							<div id="iconcamera"></div>
+							<!-- slide 2 -->
+							<div class="folder">
+								<div class="iconFolder"><img src="img/iconfolder.png"/></div>
+								<div class="folderstyle eventSectionForHover" id="folderone" onclick="verAlbum1()">
+									<img src="img/FotosEventos/Hamburgeseada_8-13/IMG_4864ch.png"/>
+									<span class="photoAlbumTitle eventSectionToHide">Meals 2013</span>
+								</div>
+							</div>
+							<!-- slide 2 -->
+							<div class="folder">
+								<div class="iconFolder"><img src="img/iconfolder.png"/></div>
+								<div class="folderstyle eventSectionForHover" id="foldertwo" onclick="verAlbum2()">
+									<img src="img/FotosEventos/Fin2012/IMG_7963ch.png"/>
+									<span class="photoAlbumTitle eventSectionToHide">Meals 2012</span>
+								</div>
+							</div>
+							<!-- ver mas en face -->
+							<div class="folder">
+								<div class="folderstyle" style="margin-top:0px;">
+									<a href="https://www.facebook.com/CodigoDelSur?fref=ts" target="_blank">
+										<img src="img/seeMore.png"/>
+									</a>
+								</div>
+							</div>
+							
+							<!-- Slide simple 1 -->
+							<div id="photoshide01" class="photoshide">
+								
+							</div>   
+							
+							<!-- Slide simple 2 -->	
+							<div id="photoshide02" class="photoshide">
+							
+							</div> 
+							
+							<!-------Max Width 900 -------->
+							
+															
+							
+						</div>
+						</div>
+					<div class="max-900">
+					<div class="titlePhoto">
+						<h5>Photos</h5>
+						<div id="iconcamera"></div>
+					</div>
+						<div id="iconAbout">
+							<ul id="contentIconAbout">
+								<li class="buttonServ ">
+									<div class="titleS"> 
+										<div style="display: block">
+											<span  onclick="viewAbout('.Easter2013')">
+												<img src="img/FotosEventos/Hamburgeseada_8-13/IMG_4864ch.png"/>  
+											</span>
+											<span class="photoAlbumTitle">Meals 2013</span>
+										</div>
+									</div>
+									<div class="Easter2013 contA" style="display:none">
+									
+									</div>
+								</li>
+								<li class="buttonServ ">
+									<div class="titleS"> 
+										<div style="display: block">
+											<span onclick="viewAbout('.Meals')">
+												<img src="img/FotosEventos/Fin2012/IMG_7963ch.png"/>
+											</span>
+											<span class="photoAlbumTitle">Meals 2012</span>
+										</div>
+									</div>
+									<div class="Meals contA" style="display:none">
+									
+									</div>
+								</li>
+								<li class="buttonServ ">
+									<div class="titleS"> 
+										
+										<div class="folderstyle" style="margin-top:0px;">
+											<a class="otherLink" href="https://www.facebook.com/CodigoDelSur?fref=ts" target="_blank">
+												<img src="img/seeMore.png"/>
+											</a>
+										</div>										
+									</div>
+									
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				
+						<div id="videos">
+						<div class="titlePhoto">
+						<h5>Videos</h5>
+						<div id="iconvideo"></div>
+						</div>
+						<div id="videolist">
+							<ul>
+								<li class="btnvideo01" onclick="verVideo01()"><span>Video CDS 2013</span><img src="img/btnright.png"/></li>
+								<li class="btnvideo02" onclick="verVideo02()"><span>Video Harlem Shake 2013</span><img src="img/btnright.png"/></li>
+								<li class="btnvideo03" onclick="verVideo03()"><span>Video CDS 2012</span><img src="img/btnright.png"/></li>
+							</ul>
+						</div>
+					</div>
+					
+					
+				
+				</section>
+			</div>
+			
+			<!-- 5to triangulo con CANVAS // no funciona en IE -->
+			<div class="triangulo">
+				<img src="img/blue02.png"/>
+			</div>
+			<!-- Fin -->
+ 			<div id="divStaff">
+				<section id="SecStaff">
+					<div id="titles"><h2 id="Staff">Staff /</h2><h3 class="subtitle" >Our team</h3></div>
+					<div id="members"></div>					
+					<div id="contenedordefotos">
+						<a id="photo01" href="#testid" onclick="verStaff('01')"></a>	<!-- Nicolas A. -->
+						<a id="photo02" onclick="verStaff('02')"></a>	<!-- Alfredo L. -->
+						<a id="photo03"	onclick="verStaff('03')"></a>	<!-- Nicolas J. -->
+						<a id="photo04"	onclick="verStaff('04')"></a>	<!-- Luciano A. -->
+						<a id="photo05"	onclick="verStaff('05')"></a>	<!-- Cecilia P. -->
+						<!--a id="photo08"	href="#divStaff" onclick="verStaff('08')"></a-->	<!-- Yael O. -->
+						<a id="photo06"	onclick="verStaff('06')"></a>	<!-- Noelia R. -->
+						<a id="photo07"	onclick="verStaff('07')"></a>	<!-- Pablo A. -->
+						<a id="photo09"	onclick="verStaff('09')"></a>	<!-- Gabriel V. -->
+						<a id="photo10" onclick="verStaff('10')"></a>	<!-- Mauricio M. -->
+						<a id="photo11" onclick="verStaff('11')"></a>	<!-- Federico F. -->
+						<a id="photo12" onclick="verStaff('12')"></a>	<!-- Andres M. -->
+						<a id="photo13" onclick="verStaff('13')"></a>	<!-- Enrique B. -->
+						<a id="photo14" onclick="verStaff('14')"></a>	<!-- Agustin Leira -->
+						<a id="photo15" onclick="verStaff('15')"></a>	<!-- Damian D. -->
+						<a id="photo16" onclick="verStaff('16')"></a>	<!-- Agustin De Leon -->
+						<a id="photo17" onclick="verStaff('17')"></a>	<!-- Noelia C. -->
+						<a id="photo19"	onclick="verStaff('19')"></a>	<!-- Veronica M. -->
+						<a id="photo20"	onclick="verStaff('20')"></a>	<!-- Nicolas B. -->
+						<a id="photo21"	onclick="verStaff('21')"></a>	<!-- Marcos A. -->
+						<a id="photo22"	onclick="verStaff('22')"></a>	<!-- Sergio O. -->
+						<a id="photo23"	onclick="verStaff('23')"></a>	<!-- Ignacio R. -->
+						<a id="photo24"	onclick="verStaff('24')"></a>	<!-- Esteban H. -->
+						<a id="photo25"	onclick="verStaff('25')"></a>	<!-- Carlos N. -->
+						<a id="photo26"	onclick="verStaff('26')"></a>	<!-- Nicolas T. -->
+						<a id="photo27" onclick="verStaff('27')"></a>	<!-- Diego A. -->
+						<a id="photo28"	onclick="verStaff('28')"></a>	<!-- Juan O. -->
+						<a id="photo29"	onclick="verStaff('29')"></a>	<!-- Juan G. -->
+						<a id="photo30"	onclick="verStaff('30')"></a>	<!-- Mathias dB. -->
+						<a id="photo31"	onclick="verStaff('31')"></a>	<!-- Ligia M. -->
+						<a id="photo32"	onclick="verStaff('32')"></a>	<!-- Pablo G. -->
+						<a id="photo33"	onclick="verStaff('33')"></a>	<!-- Gianina M. -->
+						<a id="photo34"	onclick="verStaff('34')"></a>	<!-- Williams O. -->
+						<a id="photo36"	onclick="verStaff('36')"></a>	<!-- Leonardo M. -->
+						<a id="photo37"	onclick="verStaff('37')"></a>	<!-- Natalia A. -->
+						<a id="photo39"	onclick="verStaff('39')"></a>	<!-- Diego V. -->
+						<a id="photo40"	onclick="verStaff('40')"></a>	<!-- Alejandro -->
+						<a id="photo41"	onclick="verStaff('41')"></a>	<!-- Alejandro C -->
+						<a id="photo38"	onclick="verStaff('38')"></a>	<!-- Beatriz S. -->
+						<div style="clear: both;"></div>
+					</div>
+				</section>
+			</div>
+			<!-- 6to triangulo -->
+			<div class="triangulo">
+				<img src="img/red02.png"/>
+			</div>
+			<!-- Fin -->
+			
+			<div id="divContactUs">
+				<section id="SecContactUs">
+					<div id="titles"><h2 id="ContactUs">Contact us /</h2><h3 class="subtitle" >Getting started, suport</h3></div>
+					<div style="clear: both"></div>
+                
+                
+                    <div id="leftContactUs">
+                    
+                    	<h4>Below you can find our contact information</h4>
+                        <span id="Contact_underline">Mailing Address </span>
+                        <div><span>Félix Olmedo 3532 </span></div>
+                         <div><span>CP 11700 </span></div>
+                        <div><span>Montevideo - URUGUAY </span></div>
+                        
+                        <span id="Contact_underline">Phone General </span>
+                        <div><span> +598 2309 9008 </span></div>
+                     
+                        
+                        <span id="Contact_underline">Inquiries </span>
+                        <div><span>info@codigodelsur.com </span></div>
+                         
+                         <span id="Contact_underline">Skype </span>
+						<div><span>pablo.ganachipi</span></div>
+						<div><span>nataliaacds</span></div>
+						
+						<div><span>CP 11700 </span></div>
+                        <div><span>Montevideo - URUGUAY </span></div>
+
+
+                    </div>
+                    <div id="rightContactUs">
+                    		
+                        <form id="contact-form" action="mail.php" method="post">
+                            <h4>Or you could use the following form to send us a message and we will contact you as soon as possible.</h4>
+                         
+                            <div>
+                               
+                                    <span>Name*: </span>
+                                    <input id="Name" name="Name" type="text" tabindex="1" required>
+                                
+                            </div>
+                            <div>
+                                
+                                    <span>Email*: </span>
+                                    <input id="Email" name="Email" type="email" tabindex="2" required>
+                               
+                            </div>
+                            <div>
+                               
+                                    <span>Company: </span>
+                                    <input id="Company" name="Company" type="tel" tabindex="3" required>
+                               
+                            </div>
+                            <div>
+                               
+                                    <span>Comments*: </span>
+                                    <textarea id="Comments" name="Comments" tabindex="4" required></textarea>
+                                
+                            </div>
+                            <div>	
+                            	<span id="message" style="float: left; width:200px; font-size:13px; line-height: 15px;"></span>
+                                <div  style="float:right; width: 88px;  margin-bottom: 20px;">
+                                	<a id="contact-submit" style="margin: 0;" onclick="sendEmail()">Send</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div style="clear: both;"></div>
+				</section>
+			</div>
+			
+			<!-- 7mo triangulo -->
+			<div class="triangulo" style="background-color: #40B4A6;">
+				<img src="img/green03.png"/>
+			</div>
+			<!-- fin -->
+			
+			<!-- FOOTER -->
+			<footer id="footer">
+				<section id="SecFooter">              
+					<div id="footer_content">
+						<div id="facebook_twitter"><a class="otherLink" href="https://www.facebook.com/CodigoDelSur?fref=ts" target="_blank" id="footer_facebook"></a><a class="otherLink" href="https://twitter.com/codigodelsur" target="_blank" id="footer_twitter"></a></div>
+                 
+						<nav id="menu2">  
+							<ul>			
+								<li style="border:hidden;"><a href="#divPortfolio">Portfolio</a></li>
+								<li><a href="#divServices">Services</a></li>
+								<li><a href="#divClients">Clients</a></li>
+								<li><a href="#divAboutUs">About us</a></li>
+								<li><a href="#divContactUs">Contact us</a></li>
+							</ul>
+						</nav>
+							
+						<div id="uru">
+							<a href="#" id="cuti"></a>
+							<span style="float: left; text-align: left; margin-top:12px;">ASSOCIATED WITH THE URUGUAYAN <br> CHAMBER OF TECHNOLOGY</span>
+							<div style="clear: both;"></div>
+						</div>
+						<div id="direction">
+							<a href="#" id="uruguay"></a>
+							<span>Félix Olmedo 3532 | +598 2309 9008 | CP 11700 |  Montevideo | URUGUAY </span>
+                        </div>
+                        <span id="footer_line"></span>
+						<div><span>Copyright © 2013 CodigoDelSur</span></div>
+                    </div>
+					<div style="clear: both"></div>
+                </section>
+            </footer>
+			
+	</body>
